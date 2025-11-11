@@ -38,13 +38,28 @@ function App() {
           </h2>
         </section>
         {/* procedureSection */}
-        <section id="procedureSection" className="flex flex-col items-center justify-around bg-white w-screen h-screen" >
+        <section id="procedureSection" className="flex flex-col items-center justify-around bg-white w-screen min-h-screen h-auto" >
             <h3 className='text-4xl'>WELCOME TO ROOTS AND ROOF ARCHITECTURE</h3>
             <h2 className='text-5xl font-bold  tracking-wider'>MODERN BIOPHILIC ARCHITECTURE</h2>
             {/* procedureContainer */}
-            <div className='bg-gray-200 w-screen min-h-[60%] h-auto flex justify-center items-center gap-x-8'>
+            <div className='bg-gray-200 w-screen min-h-[60%] h-auto flex flex-wrap p-10 justify-center items-center gap-8'>
               {/* cardContainer */}
-              <div className='flex w-[20%] h-[90%] bg-amber-500'>
+              <div className='flex w-[300px] h-[400px] bg-amber-500'>
+                {/* imageOfCard */}
+                <div>
+
+                </div>
+                {/* circleNum */}
+                <div>
+
+                </div>
+                {/* steps */}
+                <div>
+
+                </div>
+              </div>
+             {/* cardContainer */}
+              <div className='flex w-[300px] h-[400px] bg-amber-500'>
                 {/* imageOfCard */}
                 <div>
 
@@ -59,22 +74,8 @@ function App() {
                 </div>
               </div>
               {/* cardContainer */}
-              <div className='flex w-[20%] h-[90%] bg-amber-500'>
-                {/* imageOfCard */}
-                <div>
-
-                </div>
-                {/* circleNum */}
-                <div>
-
-                </div>
-                {/* steps */}
-                <div>
-
-                </div>
-              </div>
               {/* cardContainer */}
-              <div className='flex w-[20%] h-[90%] bg-amber-500'>
+              <div className='flex w-[300px] h-[400px] bg-amber-500'>
                 {/* imageOfCard */}
                 <div>
 
