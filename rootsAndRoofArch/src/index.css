@@ -11,3 +11,39 @@ body {
 .roots-btn-hover-color:hover {
   color: #91C372
 }
+
+
+/* animations */
+
+/* Fade-in animation */
+
+
+/* Reusable class */
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Keyframes for fade + slide up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0.5;
+    transform: translateY(20px); /* start slightly lower */
+  }
+  to {
+    /* opacity: 1; */
+    transform: translateY(0);
+  }
+}
+
