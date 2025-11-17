@@ -39,7 +39,7 @@ export default function NavBar(){
                 {/* navContanier */}
                 <nav className='w-screen h-auto'>
                 {/* NavDivContainer for layout */}
-                <div className={`hidden md:flex w-full h-18 transition-all duration-500 ease-in-out ${location.pathname === "/" || scrolled ? "bg-white" : "bg-transparent"} fixed top-0 left-0 z-20 flex justify-around items-center`}>
+                <div className={`hidden md:flex w-full h-18 transition-all duration-500 ease-in-out ${ location.pathname === "/about" || scrolled ? "bg-white" : "bg-transparent"} fixed top-0 left-0 z-20 flex justify-around items-center`}>
                     {/* icon */}
                     <Link to="/">
                         <div id="logo" className='h-13 w-50 bg-center bg-cover bg-no-repeat' style={{backgroundImage: `url(${longLogo})`}}></div>
@@ -57,7 +57,7 @@ export default function NavBar(){
                         <Link className="roots-btn-hover-color text-shadow-2xs text-[20px]" to="/portfolio">Portfolio</Link>
                     </li>
                     {
-                    scrolled ? 
+                    location.pathname === "/about" ||   scrolled ? 
                     <li className='transition-all duration-500 ease-in-out flex justify-center items-center text-white roots-btn-color text-[20px] w-auto h-10 rounded-[10px] px-6 py-2'>
                         <Link className="roots-btn-hover-color text-shadow-2xs text-[20px]" to="/contact">Contact</Link>
                     </li>
@@ -97,10 +97,10 @@ export default function NavBar(){
                                 <Link aria-label = "Navigation a to Home" className="akiro-primary-color-text akiro-hover-text font-normal ml-6" to="/about">About</Link>
                             </div>
                             <div className="w-screen h-[47.5px] bg-gray-50 border-[0.5px] border-green-100 cursor-pointer flex justify-between items-center">
-                                <Link aria-label = "Navigation a to Home" className="akiro-primary-color-text akiro-hover-text font-normal ml-6" to="/">Portfolio</Link>
+                                <Link aria-label = "Navigation a to Home" className="akiro-primary-color-text akiro-hover-text font-normal ml-6" to="/portfolio">Portfolio</Link>
                             </div>
                             <div className="w-screen h-[47.5px] bg-gray-50 border-[0.5px] border-green-100 cursor-pointer flex justify-between items-center">
-                                <Link aria-label = "Navigation a to Home" className="akiro-primary-color-text akiro-hover-text font-normal ml-6" to="/">Contact</Link>
+                                <Link aria-label = "Navigation a to Home" className="akiro-primary-color-text akiro-hover-text font-normal ml-6" to="/contact">Contact</Link>
                             </div>
                         </ul>
                     </nav>}

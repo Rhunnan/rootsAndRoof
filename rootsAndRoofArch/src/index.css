@@ -8,6 +8,11 @@ body {
   background-color: #25653F;
 }
 
+.roots-text-color {
+  color: #25653F;
+}
+
+
 .roots-btn-hover-color:hover {
   color: #91C372
 }

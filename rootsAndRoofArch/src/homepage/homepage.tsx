@@ -3,8 +3,17 @@ import logo from '../assets/logo.png'
 import CardProcedure from '../components/cards';
 import NavBar  from '../components/navbar';
 import bioPhilic_Design from  '../assets/biophilic_design.png'
-import sample from'../assets/sample.png'
+import portfolio1 from '../assets/portfolio/portfolio-1.jpg'
+import portfolio2 from '../assets/portfolio/portfolio2.jpg'
+import portfolio3 from '../assets/portfolio/portfolio-3.jpg'
+import portfolio4 from '../assets/portfolio/portfolio-4.jpg'
+import portfolio5 from '../assets/portfolio/portfolio-5.jpg'
+import portfolio6 from '../assets/portfolio/portfolio-6.jpg'
+import procedure1 from '../assets/procedure-1.png'
+import procedure3 from '../assets/procedure-2.png'
+import procedure2 from '../assets/procedue-3.png'
 import { Link } from 'react-router-dom';
+import FooterComponent from '../components/footer';
 
 export default function HomePage(){
     return (
@@ -14,7 +23,7 @@ export default function HomePage(){
         {/* HeroSection */}
         <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-bottom bg-cover' style={{backgroundImage: `url(${bgHero})`}}>
           <h2 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
-            <span className='text-4xl md:text-6xl font-bold'>BIOPHILIC HOMES</span><br/><span className='text-2xl'>WHERE NATURE MEETS DESIGN</span>
+            <span className='text-4xl md:text-7xl font-normal'>BIOPHILIC HOMES</span><br/><span className='text-2xl font-normal'>WHERE NATURE MEETS DESIGN</span>
           </h2>
         </section>
         <section id="procedureSection" className="p-10 flex flex-col items-center justify-around bg-white w-screen min-h-screen lg:min-h-screen h-auto" >
@@ -30,16 +39,17 @@ export default function HomePage(){
                 Site Selection and Analysis
                 Site Utilization and Land-Use Studies
                 `}
-              imagePath={bgHero}
+              imagePath={procedure1}
               />
             <CardProcedure 
               number={2} 
               title="ARCHITECTURAL DESIGN" 
               description={`Schematic Design
-                Design Development Phase
                 Contract Document Phase
+                Design Development Phase
+
                 `}
-              imagePath={bgHero}
+              imagePath={procedure2}
               />
             <CardProcedure 
               number={3} 
@@ -47,14 +57,14 @@ export default function HomePage(){
               description={`Quality Control
                 Evaluation of Construction Work
                 Preparation of Daily Inspection Reports`}
-              imagePath={bgHero}
+              imagePath={procedure3}
               />
             <CardProcedure 
               number={4} 
               title="ARCH & ENGR DESIGN" 
               description={`Design
-                Site Supervision & Quality Control
                 Post Construction Services
+                Site Supervision & Quality Control
                 `} 
               imagePath={bgHero}
               />
@@ -77,12 +87,12 @@ export default function HomePage(){
          {/* Featured Project */}
         <h2 className='p-10 text-3xl md:text-4xl semi-bold  tracking-wider font-bold'>FEATURED PROJECT</h2>
         <section className='flex flex-wrap justify-center items-center gap-3 w-full lg:w-[70%] h-auto' >
-          <div style={{backgroundImage: `url(${sample})`}} className='bg-no-repeat bg-cover bg-center h-[300px] w-[300px] bg-amber-300'></div>
-          <div style={{backgroundImage: `url(${sample})`}} className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>
-          <div style={{backgroundImage: `url(${sample})`}}className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>
-          <div style={{backgroundImage: `url(${sample})`}}  className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>
-          <div style={{backgroundImage: `url(${sample})`}}className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>
-          <div style={{backgroundImage: `url(${sample})`}}className='bg-no-repeat bg-cover bg-center h-[300px] w-[300px] bg-amber-300'></div>
+          <div style={{backgroundImage: `url(${portfolio1})`}} className='bg-no-repeat bg-cover bg-center h-[300px] w-[300px] bg-amber-300'></div>
+          <div style={{backgroundImage: `url(${portfolio2})`}} className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>
+          <div style={{backgroundImage: `url(${portfolio3})`}}className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>
+          <div style={{backgroundImage: `url(${portfolio4})`}}  className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>
+          <div style={{backgroundImage: `url(${portfolio5})`}}className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>
+          <div style={{backgroundImage: `url(${portfolio6})`}}className='bg-no-repeat bg-cover bg-center h-[300px] w-[300px] bg-amber-300'></div>
         </section>
         <h2 className='p-10 text-3xl md:text-4xl semi-bold  tracking-wider'>Like To See More Of Our Projects ?</h2>
         <div className='transition-all duration-500 ease-in-out flex justify-center items-center text-white roots-btn-color text-[20px] w-auto h-10 rounded-[10px] px-6 py-2'>
@@ -92,10 +102,9 @@ export default function HomePage(){
         <h2 className='p-10 text-2xl md:text-4xl semi-bold  tracking-wider'>WHAT IS IN OUR HOMES?</h2>
         <img aria-label='' src={bioPhilic_Design} className='fade-in-up relative h-[80%] lg:h-[60%] bg-no-repeat bg-bottom bg-fill w-[80%] lg:w-[60%]'/>
         {/* footer */}
-        <div className='mt-20 min-h-[150px] h-auto w-screen roots-btn-color'>
-          <h2>Footer</h2>
-        </div>
-      </main>      
+        <FooterComponent/>
+      </main> 
+    
     </>
     );
 }
