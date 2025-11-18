@@ -14,6 +14,7 @@ import procedure3 from '../assets/procedure-2.png'
 import procedure2 from '../assets/procedue-3.png'
 import { Link } from 'react-router-dom';
 import FooterComponent from '../components/footer';
+import InviteComponent from '../components/invite';
 
 export default function HomePage(){
     return (
@@ -102,6 +103,7 @@ export default function HomePage(){
         <h2 className='p-10 text-2xl md:text-4xl semi-bold  tracking-wider'>WHAT IS IN OUR HOMES?</h2>
         <img aria-label='' src={bioPhilic_Design} className='fade-in-up relative h-[80%] lg:h-[60%] bg-no-repeat bg-bottom bg-fill w-[80%] lg:w-[60%]'/>
         {/* footer */}
+        <InviteComponent/>
         <FooterComponent/>
       </main> 
     

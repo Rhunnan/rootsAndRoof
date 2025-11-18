@@ -4,7 +4,7 @@ export default function FooterComponent(){
     const recentYear = new Date().getFullYear();
 
     return(
-        <div className='mt-20 min-h-[150px] h-auto w-screen roots-btn-color'>
+        <div className='min-h-[150px] h-auto w-screen roots-btn-color'>
             <footer aria-label="footer section of every page - Akiro Construction and Supply Cebu" className="h-auto w-auto flex flex-col">
             <div className="pt-10 flex min-h-[40vh] md:min-h-[30vh] lg:min-h-[35vh] h-auto w-screen akiro-primary-color-bg justify-around">
             {/* <Link to="/">

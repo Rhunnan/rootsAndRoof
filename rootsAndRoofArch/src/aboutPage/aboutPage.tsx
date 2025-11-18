@@ -3,6 +3,7 @@ import bgHero from "../assets/bg-hero-3.png"
 import FooterComponent from "../components/footer";
 import VisionComponent from "./components/vision";
 import MissionComponent from "./components/mission";
+import TeamComponent from "./components/team";
 
 export default function AboutPage(){
     return (<>
@@ -22,11 +23,7 @@ export default function AboutPage(){
         </section>
         <MissionComponent/>
         <VisionComponent/>
-        <section className='fade-in-up relative min-h-screen h-auto w-screen bg-red-200'>
-          <h2 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
-            <span className='text-4xl md:text-6xl font-bold'>BIOPHILIC HOMES</span><br/><span className='text-2xl'>WHERE NATURE MEETS DESIGN</span>
-          </h2>
-        </section>
+        <TeamComponent/>
         <FooterComponent/>       
     </main>
     </>
