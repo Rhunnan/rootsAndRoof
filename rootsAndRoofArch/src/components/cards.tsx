@@ -5,13 +5,14 @@ type props = {
     title: string,
     description: string,
     imagePath: string
+    animation:string
 }
 
-export default function CardProcedure({number, title, description, imagePath}:props){
+export default function CardProcedure({number, title, description, imagePath, animation}:props){
     return (
         <>
             {/* cardContainer */}
-            <div className='relative flex flex-col w-[300px] h-[400px] rounded-xl shadow-2xl'>
+            <div className={` ${animation} relative flex flex-col w-[300px] h-[400px] rounded-xl shadow-2xl`}>
                 {/* imageOfCard */}
                 <div className='w-full h-[50%] bg-cover bg-no-repeat rounded-t-xl' style={{backgroundImage:`url(${imagePath})`}}>
 

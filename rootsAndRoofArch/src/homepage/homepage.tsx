@@ -24,15 +24,15 @@ export default function HomePage(){
         {/* HeroSection */}
         <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-bottom bg-cover' style={{backgroundImage: `url(${bgHero})`}}>
           <h2 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
-            <span className='text-4xl md:text-7xl font-normal'>BIOPHILIC HOMES</span><br/><span className='text-2xl font-normal'>WHERE NATURE MEETS DESIGN</span>
+            <span className='fade-in-normal text-4xl font-semibold md:text-7xl lg:font-normal'>BIOPHILIC HOMES</span><br/><span className='fade-in-slow text-2xl font-normal'>WHERE NATURE MEETS DESIGN</span>
           </h2>
         </section>
         <section id="procedureSection" className="p-10 flex flex-col items-center justify-around bg-white w-screen min-h-screen lg:min-h-screen h-auto" >
           {/* procedureSection */}
-          <h3 className='text-sm md:text-2xl lg:text-4xl '>WELCOME TO ROOTS AND ROOF ARCHITECTURE</h3>
-          <h2 className='p-5 text-2xl md:text-3xl lg:text-5xl font-bold  tracking-wider'>SERVICES OFFERED</h2>
+          <h3 className='text-sm md:text-2xl lg:text-4xl fade-in-normal'>WELCOME TO ROOTS AND ROOF ARCHITECTURE</h3>
+          <h2 className='p-5 text-2xl md:text-3xl lg:text-5xl font-bold  tracking-wider fade-in-slow'>SERVICES OFFERED</h2>
           {/* procedureContainer */}
-          <div className='bg-gray-200 w-screen min-h-[40%] p-5 h-auto flex flex-wrap justify-center items-center gap-8'>
+          <div className='bg-gray-100 w-screen min-h-[40%] p-5 h-auto flex flex-wrap justify-center items-center gap-8 '>
             <CardProcedure 
               number={1} 
               title="PRE-DESIGN" 
@@ -41,16 +41,17 @@ export default function HomePage(){
                 Site Utilization and Land-Use Studies
                 `}
               imagePath={procedure1}
-              />
+              animation="slideFromLeftFast"
+          />
             <CardProcedure 
               number={2} 
               title="ARCHITECTURAL DESIGN" 
               description={`Schematic Design
                 Contract Document Phase
                 Design Development Phase
-
                 `}
               imagePath={procedure2}
+              animation="slideFromLeftNormal"
               />
             <CardProcedure 
               number={3} 
@@ -59,6 +60,7 @@ export default function HomePage(){
                 Evaluation of Construction Work
                 Preparation of Daily Inspection Reports`}
               imagePath={procedure3}
+              animation="slideFromLeftSlow"
               />
             <CardProcedure 
               number={4} 
@@ -68,12 +70,10 @@ export default function HomePage(){
                 Site Supervision & Quality Control
                 `} 
               imagePath={bgHero}
+              animation="slideFromLeftVerySlow"
               />
-
-
           </div>
         </section>
-       
         {/* about roots and roof section */}
         <section className='flex flex-col justify-center items-center bg-white w-screen gap-20 min-h-screen h-auto' >
           <img className="w-[150px] h-[150px]" src={logo} alt="Roots And Roof Architects Cebu City Logo" />
@@ -87,7 +87,7 @@ export default function HomePage(){
         </section>
          {/* Featured Project */}
         <h2 className='p-10 text-3xl md:text-4xl semi-bold  tracking-wider font-bold'>FEATURED PROJECT</h2>
-        <section className='flex flex-wrap justify-center items-center gap-3 w-full lg:w-[70%] h-auto' >
+        <section className='fade-in-normal flex flex-wrap justify-center items-center gap-3 w-full lg:w-[70%] h-auto' >
           <div style={{backgroundImage: `url(${portfolio1})`}} className='bg-no-repeat bg-cover bg-center h-[300px] w-[300px] bg-amber-300'></div>
           <div style={{backgroundImage: `url(${portfolio2})`}} className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>
           <div style={{backgroundImage: `url(${portfolio3})`}}className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>

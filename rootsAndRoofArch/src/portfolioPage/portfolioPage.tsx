@@ -13,6 +13,7 @@ import portfolio12 from '../assets/portfolio/portfolio-12.jpg'
 import portfolio13 from '../assets/portfolio/portfolio-13.jpg'
 import NavBar from '../components/navbar'
 import bgHero from "../assets/bg-hero-2.png"
+import InviteComponent from '../components/invite'
 import FooterComponent from '../components/footer'
 
 
@@ -28,7 +29,7 @@ export default function PortfolioPage(){
         </section>
         <h3 className='text-sm md:text-2xl lg:text-3xl pt-10'>BIOPHILIC DESIGNS</h3>
         <h2 className='pt-2 pb-10 text-3xl md:text-5xl semi-bold  font-bold  tracking-wider'>PROJECT GALLERY</h2>
-        <section className='flex flex-wrap justify-center items-center gap-3 w-full lg:w-full h-auto' >
+        <section className='flex flex-wrap justify-center items-center gap-3 w-full lg:w-full h-auto pb-10' >
           <div style={{backgroundImage: `url(${portfolio1})`}} className='bg-no-repeat bg-cover bg-center h-[300px] w-[300px] bg-amber-300'></div>
           <div style={{backgroundImage: `url(${portfolio2})`}} className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>
           <div style={{backgroundImage: `url(${portfolio3})`}}className='bg-no-repeat bg-cover bg-center  h-[300px] w-[300px] bg-amber-300'></div>
@@ -43,6 +44,7 @@ export default function PortfolioPage(){
           <div style={{backgroundImage: `url(${portfolio12})`}}className='bg-no-repeat bg-cover bg-center h-[300px] w-[300px] bg-amber-300'></div>
           <div style={{backgroundImage: `url(${portfolio13})`}}className='bg-no-repeat bg-cover bg-center h-[300px] w-[300px] bg-amber-300'></div>        
         </section>
+        <InviteComponent/>
         <FooterComponent/>
     </main>
     </>
