@@ -2,6 +2,11 @@ import NavBar from "../components/navbar";
 import bgHero from "../assets/bg-hero-4.png"
 import FooterComponent from "../components/footer";
 import InviteComponent from "../components/invite";
+import portfolio6 from '../assets/portfolio/portfolio-6.jpg'
+import procedure1 from '../assets/procedure-1.png'
+import procedure3 from '../assets/procedure-2.png'
+import procedure2 from '../assets/procedue-3.png'
+import CardProcedure from "../components/cards";
 
 export default function ContactPage(){
     return (<>
@@ -53,6 +58,65 @@ export default function ContactPage(){
             </div>
           </div>
         </section>    
+         {/* <h2 className="text-5xl font-bold py-10">OUR SERVICES</h2> */}
+        <section className='flex flex-wrap justify-center items-center gap-8 md:w-screen lg:w-[70%] h-auto' >
+          {/* SERVICES */}
+          {/* <div  className='flex flex-col justify-between rounded-sm items-start h-[300px] lg:h-[350px] w-[300px] lg:w-[350px] bg-white shadow-2xl'> */}
+              {/* line design */}
+              {/* <div className="h-[2%] w-full bg-black rounded-t-2xl"></div>
+              <h2 className='text-xl font-bold'>Pre-Design Consultation</h2>
+              <p className='text-sm  font-semibold whitespace-pre-line text-center'>Feasibility Studies: Analyzing project viability, constraints, and const
+implications</p>  
+          </div> */}
+          
+        </section>
+        <section id="procedureSection" className=" flex flex-col items-center justify-between bg-white w-screen min-h-screen lg:min-h-screen h-auto" >
+          {/* procedureSection */}
+          <h3 className='text-sm md:text-2xl lg:text-4xl fade-in-normal'>WELCOME TO ROOTS AND ROOF ARCHITECTURE</h3>
+          <h2 className='p-5 text-2xl md:text-3xl lg:text-5xl font-bold  tracking-wider fade-in-slow'>SERVICES OFFERED</h2>
+          {/* procedureContainer */}
+          <div className='bg-gray-100 w-screen min-h-[40%] p-5 h-auto flex flex-wrap justify-center items-center gap-8 '>
+            <CardProcedure 
+              number={1} 
+              title="PRE-DESIGN" 
+              description={`Feasibility Studies
+                Site Selection and Analysis
+                Site Utilization and Land-Use Studies
+                `}
+              imagePath={procedure1}
+              animation="slideFromLeftFast"
+          />
+            <CardProcedure 
+              number={2} 
+              title="ARCHITECTURAL DESIGN" 
+              description={`Schematic Design
+                Contract Document Phase
+                Design Development Phase
+                `}
+              imagePath={procedure2}
+              animation="slideFromLeftNormal"
+              />
+            <CardProcedure 
+              number={3} 
+              title="SUPERVISION" 
+              description={`Quality Control
+                Evaluation of Construction Work
+                Preparation of Daily Inspection Reports`}
+              imagePath={procedure3}
+              animation="slideFromLeftSlow"
+              />
+            <CardProcedure 
+              number={4} 
+              title="ARCH & ENGR DESIGN" 
+              description={`Design
+                Post Construction Services
+                Site Supervision & Quality Control
+                `} 
+              imagePath={bgHero}
+              animation="slideFromLeftVerySlow"
+              />
+          </div>
+        </section>
         <InviteComponent/>
         <FooterComponent/>   
     </main>

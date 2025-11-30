@@ -100,10 +100,37 @@ export default function HomePage(){
             <a className="roots-btn-hover-color text-shadow-2xs text-2xl font-light" href="">View our Gallery</a>
         </div>
         <section className='mt-30 h-auto w-screen flex flex-col '></section>
-        <h2 className='p-10 text-2xl md:text-4xl semi-bold  tracking-wider'>WHAT IS IN OUR HOMES?</h2>
-        <img aria-label='' src={bioPhilic_Design} className='fade-in-up relative h-[80%] lg:h-[60%] bg-no-repeat bg-bottom bg-fill w-[80%] lg:w-[60%]'/>
-        {/* footer */}
+        <h2 className='p-10 text-2xl md:text-4xl semi-bold tracking-wider'>WHAT IS IN OUR HOMES?</h2>
+        <img aria-label='' src={bioPhilic_Design} className='fade-in-up relative h-[80%] lg:h-[60%] bg-no-repeat bg-bottom bg-fill w-[80%] lg:w-[60%] pb-10 '/>
+        <section  className='fade-in-up relative h-auto min-h-[50vh] md:h-[70vh] lg:h-[80vh] w-screen pb-10' >
+          <h2 className='pl-15 text-4xl w-[90%] text-[13px] md:text-2xl lg:text-3xl text-black'>
+              What makes our design revolutionary is the seamless integration of natural phenomena
+              with human ingenuity. We have engineered a home that prioritizes environmental
+              stewardship while delivering unparalleled comfort, high functionality, and structural
+              resilience. Our core components include:
+              <ul className='mt-10 list-disc pl-6 text-black '>
+                <li>
+                  Permaculture: Integrates sustainable flora ecosystems to manage storm runoff
+                  effectively and naturally mitigate localized flooding.
+                </li>
+                <li>
+                  Aquaponics: Provides an efficient, closed-loop system for generating essential
+                  nutrients, fueling plant growth without chemical fertilizers.
+                </li>
+                <li>
+                  STP (Sustainable Water Treatment): Manages and recycles the home's
+                  wastewater, supplying clean, non-potable water to integrated systems like
+                  irrigation and landscaping.
+                </li>
+                <li>
+                  Natural Light & Ventilation: Optimizes daylight penetration and utilizes passive
+                  air movement to maximize energy efficiency and enhance occupant well-being.
+                </li>
+              </ul>
+          </h2>
+        </section>
         <InviteComponent/>
+        {/* footer */}
         <FooterComponent/>
       </main> 
     

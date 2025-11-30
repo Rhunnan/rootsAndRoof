@@ -6,7 +6,7 @@ import integSystems from '../assets/integrated-systems.png'
 export default function InviteComponent(){
     return (
         <>
-            <section className="flex flex-col-reverse lg:flex-row w-screen h-auto min-h-[30vh] md:min-h-[50vh] mt-10">
+            <section className="flex flex-col-reverse lg:flex-row w-screen h-auto min-h-[30vh] md:min-h-[50vh]">
                 {/* text and buttons */}
                 <div className="flex flex-col justify-around items-center p-2 bg-gray-100 w-screen lg:w-[50vw] min-h-[30vh] md:min-h-[40vh] h-auto">
                     <h2 className="text-3xl md:text-6xl font-semibold whitespace-pre-line">{`

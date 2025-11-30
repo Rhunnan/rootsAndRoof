@@ -24,7 +24,7 @@ export default function AboutPage(){
         </section>
         <MissionComponent/>
         <VisionComponent/>
-        <TeamComponent/>
+        {/* <TeamComponent/> */}
         <InviteComponent/>
         <FooterComponent/>       
     </main>
