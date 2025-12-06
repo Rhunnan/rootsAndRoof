@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 function App() {
   return (
     <>
-       <Router>
+    <Router>
         <ScrollToTop/>
         <Routes>
         <Route path="/"element={<HomePage/>}></Route>
@@ -15,7 +15,6 @@ function App() {
         <Route path="/portfolio" element={<PortfolioPage/>}></Route>
         <Route path="/contact" element={<ContactPage/>}></Route>
       </Routes>
-      
     </Router>
     </>
   )

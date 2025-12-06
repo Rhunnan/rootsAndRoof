@@ -1,4 +1,4 @@
-import bgHero from '../assets/homePage/bg-hero.png'
+import { useEffect, useRef, useState } from "react";
 
 type props = {
     number:number,
@@ -8,11 +8,31 @@ type props = {
     animation:string
 }
 
+
 export default function CardProcedure({number, title, description, imagePath, animation}:props){
+    const ref = useRef(null);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+            }
+        },
+        { threshold: 0.35 } 
+        );
+
+        if (ref.current) observer.observe(ref.current);
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <>
             {/* cardContainer */}
-            <div className={` ${animation} relative flex flex-col w-[300px] h-[400px] rounded-xl shadow-2xl`}>
+            <div ref={ref} className={`${isVisible ? animation : "opacity-0"} relative flex flex-col w-[300px] h-[400px] rounded-xl shadow-2xl`}>
                 {/* imageOfCard */}
                 <div className='w-full h-[50%] bg-cover bg-no-repeat rounded-t-xl' style={{backgroundImage:`url(${imagePath})`}}>
 

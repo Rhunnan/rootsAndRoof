@@ -33,12 +33,12 @@ export default function InviteComponent(){
                         <p className='text-sm whitespace-pre-line text-center'>Focuses on: Integrating indoor plants, natural light, and natural elements for wellness.</p>
                     </div>
                     <div className='bg-gray-100 h-auto w-[220px]  flex-col justify-center items-center'>
-                        <img src={woodInvite} className="h-50 w-50" alt="plant-image, rootsandroof" />
+                        <img src={woodInvite} className="w-50" alt="plant-image, rootsandroof" />
                         <h2  className='font-semibold text-center text-gray-700' >Natural Materials</h2>
                         <p className='text-sm whitespace-pre-line text-center'>Focuses on: The use of wood, stone, and other natural textures/patterns in the design.</p>
                     </div>
                     <div className='bg-gray-100 h-auto w-[220px] flex-col justify-center items-center'>
-                        <img src={integSystems} className="h-50 w-50" alt="plant-image, rootsandroof" />
+                        <img src={integSystems} className="w-50" alt="plant-image, rootsandroof" />
                         <h2  className='font-semibold text-center text-gray-700'>Regenerative Systems</h2>
                         <p className='text-sm whitespace-pre-line text-center'>Focuses on: The integrated systems like aquaponics, water treatment, and permaculture.</p>
                     </div>

@@ -2,7 +2,6 @@ import NavBar from "../components/navbar";
 import bgHero from "../assets/bg-hero-4.png"
 import FooterComponent from "../components/footer";
 import InviteComponent from "../components/invite";
-import portfolio6 from '../assets/portfolio/portfolio-6.jpg'
 import procedure1 from '../assets/procedure-1.png'
 import procedure3 from '../assets/procedure-2.png'
 import procedure2 from '../assets/procedue-3.png'
@@ -21,9 +20,9 @@ export default function ContactPage(){
         
         <section className='fade-in-up min-h-screen h-auto w-screen'>
           {/* lets connect div container */}
-          <div className="flex flex-col justify-center h-[15vh] lg:h-[20vh] w-screen roots-btn-color">
-            <h2 className=" md:pl-20 lg:pl-40 md:text-6xl lg:text-7xl font-semibold text-white">LET'S CONNECT</h2>
-            <p className=" md:pl-38 lg:pl-58 md:text-3xl lg:text-4xl font-normal text-white">BUILD YOUR FUTURE</p>
+          <div className="flex flex-col justify-center h-[10vh] md:h-[15vh] lg:h-[20vh] w-screen roots-btn-color">
+            <h2 className="pl-15 md:pl-20 lg:pl-40 text-3xl md:text-6xl lg:text-7xl font-semibold text-white">LET'S CONNECT</h2>
+            <p className=" pl-28 md:pl-38 lg:pl-58 md:text-3xl lg:text-4xl font-normal text-white">BUILD YOUR FUTURE</p>
           </div>
           {/* form and map continer */}
           <div className="w-screen min-h-[70vh] h-auto flex flex-col lg:flex-row">
@@ -43,8 +42,8 @@ export default function ContactPage(){
             {/* map */}
             <div className="flex flex-col w-screen lg:w-[50vw] min-h-[30vh] lg:min-h-[50vh] gap-y-5 items-center lg:items-start justify-center h-auto relative" >
                 <div>
-                  <h2 className="text-2xl font-light"><span className="text-3xl font-light">EMAIL:</span> info@rootsandroofdesign.com</h2>
-                  <p className="text-2xl font-light"><span className="text-3xl font-light">ADDRESS:</span> Talisay City, Cebu Philippines, 6000</p>
+                  <h2 className="text-md md:text-2xl font-light"><span className="text-xl md:text-3xl font-light">EMAIL:</span> info@rootsandroofdesign.com</h2>
+                  <p className="text-sm md:text-2xl font-light"><span className="text-xl  md:text-3xl font-light">ADDRESS:</span> Talisay City, Cebu Philippines, 6000</p>
                 </div>
                 <iframe
                   aria-label="Map or Location of akiroconstruction cebu"
