@@ -6,6 +6,7 @@ import procedure1 from '../assets/procedure-1.png'
 import procedure3 from '../assets/procedure-2.png'
 import procedure2 from '../assets/procedue-3.png'
 import CardProcedure from "../components/cards";
+import AnimationObserver from "../components/observerAnimation";
 
 export default function ContactPage(){
     return (<>
@@ -14,7 +15,7 @@ export default function ContactPage(){
         <NavBar/>
         <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-position-[center_20%] md:bg-position-[center_70%] bg-cover' style={{backgroundImage: `url(${bgHero})`}}>
           <h2 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
-            <span className='text-4xl md:text-6xl font-bold'>Contact Page</span><br/><span className='text-2xl'>WHERE NATURE MEETS DESIGN</span>
+            <span className='fade-in-normal text-4xl font-semibold md:text-7xl lg:font-normal'>Contact Page</span><br/><span className='text-2xl'>WHERE NATURE MEETS DESIGN</span>
           </h2>
         </section>
         
@@ -25,7 +26,8 @@ export default function ContactPage(){
             <p className=" pl-28 md:pl-38 lg:pl-58 md:text-3xl lg:text-4xl font-normal text-white">BUILD YOUR FUTURE</p>
           </div>
           {/* form and map continer */}
-          <div className="w-screen min-h-[70vh] h-auto flex flex-col lg:flex-row">
+          <AnimationObserver>
+             <div className="w-screen min-h-[70vh] h-auto flex flex-col lg:flex-row">
             {/* forms */}
             <div className="flex flex-col gap-y-10 justify-center items-center min-h-[50vh] lg:min-h-[80vh] h-auto w-screen lg:w-[50vw]">
               <form action="" className="h-auto w-[80%] p-5 lg:w-[70%] lg:min-h-[65%] flex flex-col items-center justify-center gap-y-8 roots-btn-color rounded-2xl">
@@ -36,7 +38,9 @@ export default function ContactPage(){
               </form>
               {/* //button */}
               <div className='transition-all duration-500 ease-in-out flex justify-center items-center text-white roots-btn-color text-[20px] w-auto h-10 rounded-[5px] px-6 py-2'>
-                <button type="submit" className="roots-btn-hover-color text-shadow-2xs text-sm md:text-2xl font-light">SEND MESSAGE</button>
+                <button type="submit" className="roots-btn-hover-color text-shadow-2xs text-sm md:text-2xl font-light" onClick={()=>{
+                  alert("We apologize for the hassle. This functionality is under maintenance. \n\nFor the meantime,\nPlease Email Us directly at info@rootsnroof.com")
+                }}>SEND MESSAGE</button>
               </div>
             </div>
             {/* map */}
@@ -56,18 +60,9 @@ export default function ContactPage(){
                 </iframe>
             </div>
           </div>
+          </AnimationObserver>
         </section>    
-         {/* <h2 className="text-5xl font-bold py-10">OUR SERVICES</h2> */}
-        <section className='flex flex-wrap justify-center items-center gap-8 md:w-screen lg:w-[70%] h-auto' >
-          {/* SERVICES */}
-          {/* <div  className='flex flex-col justify-between rounded-sm items-start h-[300px] lg:h-[350px] w-[300px] lg:w-[350px] bg-white shadow-2xl'> */}
-              {/* line design */}
-              {/* <div className="h-[2%] w-full bg-black rounded-t-2xl"></div>
-              <h2 className='text-xl font-bold'>Pre-Design Consultation</h2>
-              <p className='text-sm  font-semibold whitespace-pre-line text-center'>Feasibility Studies: Analyzing project viability, constraints, and const
-implications</p>  
-          </div> */}
-          
+        <section className='flex flex-wrap justify-center items-center gap-8 md:w-screen lg:w-[70%] h-auto' > 
         </section>
         <section id="procedureSection" className=" flex flex-col items-center justify-between bg-white w-screen min-h-screen lg:min-h-screen h-auto" >
           {/* procedureSection */}

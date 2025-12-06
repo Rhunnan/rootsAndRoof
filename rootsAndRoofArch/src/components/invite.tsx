@@ -1,9 +1,12 @@
 import plantInvite from '../assets/plant-invite.png'
 import woodInvite from '../assets/wood-invite.png'
 import integSystems from '../assets/integrated-systems.png'
+import { useLocation, Link } from "react-router-dom"
 
 
 export default function InviteComponent(){
+    const location = useLocation();
+
     return (
         <>
             <section className="flex flex-col-reverse lg:flex-row w-screen h-auto min-h-[30vh] md:min-h-[50vh]">
@@ -16,12 +19,11 @@ export default function InviteComponent(){
     
                     {/* buttons */}
                     <div className="flex justify-center gap-x-10 w-full h-auto">
-
-                        <div className='transition-all duration-500 ease-in-out flex justify-center items-center text-white roots-btn-color text-[20px] w-auto min-w-[25%] h-10 rounded-[5px] px-6 py-2'>
-                            <a className="roots-btn-hover-color text-shadow-2xs text-sm md:text-2xl font-light" href="">Start Your Project</a>
+                        <div className={`transition-all duration-500 ease-in-out  ${location.pathname === "/contact" ? "hidden" : "flex"} justify-center items-center text-white roots-btn-color text-[20px] w-auto min-w-[25%] h-10 rounded-[5px] px-6 py-2`}>
+                            <Link className="roots-btn-hover-color text-shadow-2xs text-sm md:text-2xl font-light" to="/contact">Start Your Project</Link>
                         </div>
                         <div className='transition-all duration-500 ease-in-out flex justify-center items-center text-white roots-btn-color text-[20px] w-auto h-10 rounded-[5px] px-6 py-2'>
-                            <a className="roots-btn-hover-color text-shadow-2xs text-sm md:text-2xl font-light" href="">Learn More</a>
+                            <Link className="roots-btn-hover-color text-shadow-2xs text-sm md:text-2xl font-light" to="/portfolio">Learn More</Link>
                         </div>
                     </div>
                     

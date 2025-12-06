@@ -90,17 +90,8 @@ export default function FeaturedProject(){
                   <div className="mt-3">
                     <button className="btn btn-primary" 
                     onClick={()=> {
-                      if(index == 0) {
-                        navigate("/gallery/2")
-                      }else if(index==1){
-                         navigate("/gallery/0")                       
-                      }else if(index==2){
-                         navigate("/gallery/6")                       
-                      }else if(index==3){
-                         navigate("/gallery/0")                       
-                      }else{
-                         navigate("/gallery/0")                       
-                      }
+                        navigate("/portfolio")
+      
                     }}>Learn More</button>
                   </div>
                 </div>
