@@ -1,11 +1,5 @@
 
 import { useNavigate } from "react-router-dom"
-import portfolio1 from '../../assets/portfolio/portfolio-1.webp'
-import portfolio2 from '../../assets/portfolio/portfolio2.webp'
-import portfolio3 from '../../assets/portfolio/portfolio-3.webp'
-import portfolio4 from '../../assets/portfolio/portfolio-4.webp'
-import portfolio5 from '../../assets/portfolio/portfolio-5.webp'
-import portfolio6 from '../../assets/portfolio/portfolio-6.webp'
 import { useState, useRef, useEffect } from "react"
 
 export default function FeaturedProject(){
@@ -29,12 +23,12 @@ export default function FeaturedProject(){
     }, []);
 
     const featuredProjects:{projectName:string, description:string, image:string}[] = [
-        {projectName:"Sitting on a Slopping Terrain", description:"", image:`${portfolio1}`},
-        {projectName:"3 Storey Contemporary Residence", description:"", image:`${portfolio2}`},
-        {projectName:"Modern Country Side Residence", description:"", image:`${portfolio3}`},
-        {projectName:"Biophilic Design", description:"", image:`${portfolio4}`},
-        {projectName:"Biophilic Design", description:"", image:`${portfolio5}`},
-        {projectName:"Biophilic Design", description:"", image:`${portfolio6}`},
+        {projectName:"Sitting on a Slopping Terrain", description:"", image: 'https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-1.webp'},
+        {projectName:"3 Storey Contemporary Residence", description:"", image:'https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio2.webp'},
+        {projectName:"Modern Country Side Residence", description:"", image:'https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-3.webp'},
+        {projectName:"Biophilic Design", description:"", image:'https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-4.webp'},
+        {projectName:"Biophilic Design", description:"", image:'https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-5.webp'},
+        {projectName:"Biophilic Design", description:"", image:'https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-6.webp'},
 
 
     ];

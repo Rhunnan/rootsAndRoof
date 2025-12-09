@@ -1,5 +1,5 @@
 import NavBar from "../components/navbar";
-import bgHero from "../assets/bg-hero-3.webp"
+// import bgHero from "../assets/bg-hero-3.webp"
 import FooterComponent from "../components/footer";
 import VisionComponent from "./components/vision";
 import MissionComponent from "./components/mission";
@@ -11,7 +11,7 @@ export default function AboutPage(){
 
     <main className='flex flex-col items-center relative min-h-screen h-auto w-screen'>
         <NavBar/>
-        <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-cover' style={{backgroundImage: `url(${bgHero})`}}>
+        <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-cover' style={{backgroundImage: `url(https://rootsnroof-663b5.web.app/firebase-images/bg-hero-3.webp)`}}>
           <h2 className='absolute top-1/4 md:top-1/4 left-10 text-4xl text-white w-[90%]'>
             <span className='fade-in-fast text-3xl md:text-5xl font-bold whitespace-pre-line'>{`Architecture That Breathes\nwith the Planet`}</span><br/>
             <span className='fade-in-normal text-sm md:text-2xl lg:text-3xl'>Roots & Roof Designers Inc. is an innovative architecture firm reshaping the future of

@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "public": "public",
+    "headers": [
+      {
+        "source": "/firebase-images/**",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

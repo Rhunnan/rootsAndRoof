@@ -13,7 +13,7 @@ export default function ContactPage(){
 
     <main className='flex flex-col items-center relative min-h-screen h-auto w-screen'>
         <NavBar/>
-        <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-position-[center_20%] md:bg-position-[center_70%] bg-cover' style={{backgroundImage: `url(${bgHero})`}}>
+        <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-position-[center_20%] md:bg-position-[center_70%] bg-cover' style={{backgroundImage: `url(https://rootsnroof-663b5.web.app/firebase-images/bg-hero-4.webp)`}}>
           <h2 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
             <span className='fade-in-normal text-4xl font-semibold md:text-7xl lg:font-normal'>Contact Page</span><br/><span className='text-2xl'>WHERE NATURE MEETS DESIGN</span>
           </h2>

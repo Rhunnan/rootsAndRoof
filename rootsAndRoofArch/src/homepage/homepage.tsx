@@ -1,4 +1,4 @@
-import bgHero from '../assets/homePage/bg-hero.webp'
+// import bgHero from '../assets/homePage/bg-hero.webp'
 import NavBar  from '../components/navbar';
 import bioPhilic_Design from  '../assets/biophilic_design.webp'
 import FooterComponent from '../components/footer';
@@ -14,7 +14,7 @@ export default function HomePage(){
       <main className='flex flex-col items-center relative min-h-screen h-auto w-screen'>
         <NavBar/>
         {/* HeroSection */}
-        <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-bottom bg-cover' style={{backgroundImage: `url(${bgHero})`}}>
+        <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-bottom bg-cover' style={{backgroundImage: `url(https://rootsnroof-663b5.web.app/firebase-images/homePage/bg-hero.webp)`}}>
           <h2 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
             <span className='fade-in-normal text-4xl font-semibold md:text-7xl lg:font-normal'>BIOPHILIC HOMES</span><br/><span className='fade-in-slow text-2xl font-normal'>WHERE NATURE MEETS DESIGN</span>
           </h2>

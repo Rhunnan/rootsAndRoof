@@ -11,6 +11,9 @@
 // import portfolio11 from '../assets/portfolio/portfolio-11.jpg'
 // import portfolio12 from '../assets/portfolio/portfolio-12.jpg'
 // import portfolio13 from '../assets/portfolio/portfolio-13.jpg'
+
+//!!!!!!!!!!!!!!!!IMPORTANT MUST IMPLEMENT!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//TODO: Make a callback function if firebase images does not load I will call my own local images
 import NavBar from '../components/navbar';
 import bgHero from "../assets/bg-hero-2.webp";
 import InviteComponent from '../components/invite';
@@ -30,19 +33,19 @@ export default function PortfolioPage(){
     useEffect(() => {
         const loadImages = async () => {
         let imgArray = [
-                (await import("../assets/portfolio/portfolio-1.webp")).default,
-                (await import("../assets/portfolio/portfolio2.webp")).default,
-                (await import("../assets/portfolio/portfolio-3.webp")).default,
-                (await import("../assets/portfolio/portfolio-4.webp")).default,
-                (await import("../assets/portfolio/portfolio-5.webp")).default,
-                (await import("../assets/portfolio/portfolio-6.webp")).default,
-                (await import("../assets/portfolio/portfolio-7.webp")).default,
-                (await import("../assets/portfolio/portfolio-8.webp")).default,
-                (await import("../assets/portfolio/portfolio-9.webp")).default,
-                (await import("../assets/portfolio/portfolio-10.webp")).default,
-                (await import("../assets/portfolio/portfolio-11.webp")).default,
-                (await import("../assets/portfolio/portfolio-12.webp")).default,
-                (await import("../assets/portfolio/portfolio-13.webp")).default,
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-1.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio2.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-3.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-4.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-5.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-6.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-7.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-8.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-9.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-10.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-11.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-12.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-13.webp",
               ];  
         setImages(imgArray);
         setLoading(false);
