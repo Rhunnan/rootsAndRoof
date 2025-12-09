@@ -11,13 +11,13 @@
 // import portfolio11 from '../assets/portfolio/portfolio-11.jpg'
 // import portfolio12 from '../assets/portfolio/portfolio-12.jpg'
 // import portfolio13 from '../assets/portfolio/portfolio-13.jpg'
-import NavBar from '../components/navbar'
-import bgHero from "../assets/bg-hero-2.png"
-import InviteComponent from '../components/invite'
-import FooterComponent from '../components/footer'
-import { useEffect, useState } from 'react'
-import LoadingSpinner from '../components/spinner'
-import ImageWithSkeleton from '../components/imageWithSkeleton'
+import NavBar from '../components/navbar';
+import bgHero from "../assets/bg-hero-2.webp";
+import InviteComponent from '../components/invite';
+import FooterComponent from '../components/footer';
+import LoadingSpinner from '../components/spinner';
+import ImageWithSkeleton from '../components/imageWithSkeleton';
+import { useEffect, useState } from 'react';
 
 
 export default function PortfolioPage(){
@@ -30,19 +30,19 @@ export default function PortfolioPage(){
     useEffect(() => {
         const loadImages = async () => {
         let imgArray = [
-                (await import("../assets/portfolio/portfolio-1.jpg")).default,
-                (await import("../assets/portfolio/portfolio2.jpg")).default,
-                (await import("../assets/portfolio/portfolio-3.jpg")).default,
-                (await import("../assets/portfolio/portfolio-4.jpg")).default,
-                (await import("../assets/portfolio/portfolio-5.jpg")).default,
-                (await import("../assets/portfolio/portfolio-6.jpg")).default,
-                (await import("../assets/portfolio/portfolio-7.jpg")).default,
-                (await import("../assets/portfolio/portfolio-8.jpg")).default,
-                (await import("../assets/portfolio/portfolio-9.jpg")).default,
-                (await import("../assets/portfolio/portfolio-10.jpg")).default,
-                (await import("../assets/portfolio/portfolio-11.jpg")).default,
-                (await import("../assets/portfolio/portfolio-12.jpg")).default,
-                (await import("../assets/portfolio/portfolio-13.jpg")).default,
+                (await import("../assets/portfolio/portfolio-1.webp")).default,
+                (await import("../assets/portfolio/portfolio2.webp")).default,
+                (await import("../assets/portfolio/portfolio-3.webp")).default,
+                (await import("../assets/portfolio/portfolio-4.webp")).default,
+                (await import("../assets/portfolio/portfolio-5.webp")).default,
+                (await import("../assets/portfolio/portfolio-6.webp")).default,
+                (await import("../assets/portfolio/portfolio-7.webp")).default,
+                (await import("../assets/portfolio/portfolio-8.webp")).default,
+                (await import("../assets/portfolio/portfolio-9.webp")).default,
+                (await import("../assets/portfolio/portfolio-10.webp")).default,
+                (await import("../assets/portfolio/portfolio-11.webp")).default,
+                (await import("../assets/portfolio/portfolio-12.webp")).default,
+                (await import("../assets/portfolio/portfolio-13.webp")).default,
               ];  
         setImages(imgArray);
         setLoading(false);
@@ -69,9 +69,10 @@ export default function PortfolioPage(){
                             <ImageWithSkeleton key={index} src={imgSrc} index={index} indexImageClick={setIndexClicked} isImageClick={setIsClicked}/>
                         ))
                     )}
-          <InviteComponent/>
-          <FooterComponent/>
+          
         </section>
+        <InviteComponent/>
+        <FooterComponent/>
         {/* clicked image display */}
         <div className={`${isClicked ? "flex" : "hidden"} bg-black/80 justify-center items-center fixed z-10 w-screen h-screen overflow-y-scroll`}>
                     <button onClick={() => setIsClicked(false)}><span className="absolute top-18 left-10 z-30  ml-10 text-white text-[40px] select-none akiro-hover-text">X</span></button>
@@ -90,7 +91,6 @@ export default function PortfolioPage(){
                         }
                     } } className="absolute top-8/12 md:top-9/12 lg:top-60 left-25 md:left-40 z-30  ml-10 text-white text-[50px] md:text-[100px] lg:akiro-hover-text akiro-active-text select-none">{"<"}</button>
                     <img src={images[indexClicked]} alt="akiroconstruction gallery image" className="absolute z-20 lg:h-[60vh] w-[90vw] md:w-[90vw] lg:w-[50vw]" />
-
                 </div>
         
     </main>

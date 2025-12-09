@@ -1,11 +1,11 @@
 
 import { useNavigate } from "react-router-dom"
-import portfolio1 from '../../assets/portfolio/portfolio-1.jpg'
-import portfolio2 from '../../assets/portfolio/portfolio2.jpg'
-import portfolio3 from '../../assets/portfolio/portfolio-3.jpg'
-import portfolio4 from '../../assets/portfolio/portfolio-4.jpg'
-import portfolio5 from '../../assets/portfolio/portfolio-5.jpg'
-import portfolio6 from '../../assets/portfolio/portfolio-6.jpg'
+import portfolio1 from '../../assets/portfolio/portfolio-1.webp'
+import portfolio2 from '../../assets/portfolio/portfolio2.webp'
+import portfolio3 from '../../assets/portfolio/portfolio-3.webp'
+import portfolio4 from '../../assets/portfolio/portfolio-4.webp'
+import portfolio5 from '../../assets/portfolio/portfolio-5.webp'
+import portfolio6 from '../../assets/portfolio/portfolio-6.webp'
 import { useState, useRef, useEffect } from "react"
 
 export default function FeaturedProject(){

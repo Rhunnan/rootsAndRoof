@@ -1,5 +1,5 @@
 import NavBar from "../components/navbar";
-import bgHero from "../assets/bg-hero-3.png"
+import bgHero from "../assets/bg-hero-3.webp"
 import FooterComponent from "../components/footer";
 import VisionComponent from "./components/vision";
 import MissionComponent from "./components/mission";

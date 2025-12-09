@@ -1,7 +1,7 @@
-import procedure1 from '../../assets/procedure-1.png'
-import procedure3 from '../../assets/procedure-2.png'
-import procedure2 from '../../assets/procedue-3.png'
-import bgHero from '../../assets/homePage/bg-hero.png'
+import procedure1 from '../../assets/procedure-1.webp'
+import procedure3 from '../../assets/procedure-2.webp'
+import procedure2 from '../../assets/procedue-3.webp'
+import bgHero from '../../assets/homePage/bg-hero.webp'
 import CardProcedure from '../../components/cards'
 
 

@@ -1,6 +1,6 @@
-import plantInvite from '../assets/plant-invite.png'
-import woodInvite from '../assets/wood-invite.png'
-import integSystems from '../assets/integrated-systems.png'
+import plantInvite from '../assets/plant-invite.webp'
+import woodInvite from '../assets/wood-invite.webp'
+import integSystems from '../assets/integrated-systems.webp'
 import { useLocation, Link } from "react-router-dom"
 
 

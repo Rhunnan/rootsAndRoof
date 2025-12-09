@@ -1,10 +1,10 @@
 import NavBar from "../components/navbar";
-import bgHero from "../assets/bg-hero-4.png"
+import bgHero from "../assets/bg-hero-4.webp"
 import FooterComponent from "../components/footer";
 import InviteComponent from "../components/invite";
-import procedure1 from '../assets/procedure-1.png'
-import procedure3 from '../assets/procedure-2.png'
-import procedure2 from '../assets/procedue-3.png'
+import procedure1 from '../assets/procedure-1.webp'
+import procedure3 from '../assets/procedure-2.webp'
+import procedure2 from '../assets/procedue-3.webp'
 import CardProcedure from "../components/cards";
 import AnimationObserver from "../components/observerAnimation";
 
