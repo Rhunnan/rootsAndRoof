@@ -29,9 +29,9 @@ export default function FeaturedProject(){
     }, []);
 
     const featuredProjects:{projectName:string, description:string, image:string}[] = [
-        {projectName:"Biophilic Design", description:"", image:`${portfolio1}`},
-        {projectName:"Biophilic Design", description:"", image:`${portfolio2}`},
-        {projectName:"Biophilic Design", description:"", image:`${portfolio3}`},
+        {projectName:"Sitting on a Slopping Terrain", description:"", image:`${portfolio1}`},
+        {projectName:"3 Storey Contemporary Residence", description:"", image:`${portfolio2}`},
+        {projectName:"Modern Country Side Residence", description:"", image:`${portfolio3}`},
         {projectName:"Biophilic Design", description:"", image:`${portfolio4}`},
         {projectName:"Biophilic Design", description:"", image:`${portfolio5}`},
         {projectName:"Biophilic Design", description:"", image:`${portfolio6}`},
@@ -97,7 +97,7 @@ export default function FeaturedProject(){
                 </div>
               </div>
             </article>
-          ))}
+          ))} 
         </div>
       </section>
 

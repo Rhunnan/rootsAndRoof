@@ -29,7 +29,7 @@ export default function ContactPage(){
           <AnimationObserver>
              <div className="w-screen min-h-[70vh] h-auto flex flex-col lg:flex-row">
             {/* forms */}
-            <div className="flex flex-col gap-y-10 justify-center items-center min-h-[50vh] lg:min-h-[80vh] h-auto w-screen lg:w-[50vw]">
+            <div className="my-5 flex flex-col gap-y-10 justify-center items-center min-h-[50vh] lg:min-h-[80vh] h-auto w-screen lg:w-[50vw]">
               <form action="" className="h-auto w-[80%] p-5 lg:w-[70%] lg:min-h-[65%] flex flex-col items-center justify-center gap-y-8 roots-btn-color rounded-2xl">
                 <input type="text" placeholder="Full Name" className="pl-3 w-[85%] h-[45px] text-xl rounded-md text-input-color" />
                 <input type="text" placeholder="Email Address" className="pl-3 w-[85%] h-[45px] text-xl rounded-md text-input-color" />
