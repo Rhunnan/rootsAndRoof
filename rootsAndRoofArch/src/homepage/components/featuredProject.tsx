@@ -52,7 +52,7 @@ export default function FeaturedProject(){
           {featuredProjects.map((project, index) => (
             <article
               key={index}
-              className="bg-no-repeat bg-cover bg-center h-[300px] w-[300px] relative group rounded-xl overflow-hidden shadow-md"
+              className="bg-no-repeat bg-cover bg-center h-[300px] w-[300px] relative group rounded-md overflow-hidden shadow-md"
               aria-label={`Featured project: ${project.projectName}`}
             >
               {/* Interactive image container */}
