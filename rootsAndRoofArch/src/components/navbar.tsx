@@ -11,7 +11,7 @@ export default function NavBar(){
     const location = useLocation();
     useEffect(() => {
         const handleScroll = () => {
-        const halfScreen = 50;
+        const halfScreen = 10;
         if (window.scrollY > halfScreen) { 
             setScrolled(true);
         } else {
@@ -39,10 +39,19 @@ export default function NavBar(){
                 {/* navContanier */}
                 <nav className='w-screen h-auto'>
                 {/* NavDivContainer for layout */}
-                <div className={`hidden md:flex w-full h-18 transition-all duration-500 ease-in-out ${ location.pathname === "/about" || scrolled ? "bg-white" : "bg-transparent"} fixed top-0 left-0 z-20 flex justify-around items-center`}>
+                {/* just put this commented code bck if the background of logo is already transparent/ */}
+                {/* <div className={`hidden md:flex w-full h-18 transition-all duration-500 ease-in-out ${ location.pathname === "/about" || scrolled ? "bg-white" : "bg-transparent"} fixed top-0 left-0 z-20 flex justify-around items-center`}> */}
+                <div className={`hidden md:flex w-full h-18 ${ location.pathname === "/about" || scrolled ? "bg-white" : "bg-transparent"} fixed top-0 left-0 z-20 flex justify-around items-center`}>
                     {/* icon */}
                     <Link to="/">
-                        <div id="logo" className='h-13 w-50 bg-center bg-cover bg-no-repeat' style={{backgroundImage: `url(${longLogo})`}}></div>
+                        <div id="logo" className='md:h-13 md:w-60'>
+                            <img 
+                        src={longLogo} 
+                        alt="Your Website Logo" 
+                        // Make the image always fill the now-responsive parent div
+                        className="h-full w-full object-cover" 
+                    />
+                        </div>
                     </Link>
 
                     {/* navbars */}
@@ -76,8 +85,15 @@ export default function NavBar(){
                     {/* button and logo */}
                     <div className="flex w-screen h-[60px] justify-center items-center gap-x-25 bg-white">
                         <Link to="/">
-                            <div id="logo" className='ml-3 h-13 w-50 bg-center bg-cover bg-no-repeat' style={{backgroundImage: `url(${longLogo})`}}></div>
-                        </Link>
+                        <div id="logo" className=' h-10 w-50'>
+                            <img 
+                        src={longLogo} 
+                        alt="Your Website Logo" 
+                        // Make the image always fill the now-responsive parent div
+                        className="h-full w-full object-cover" 
+                    />
+                        </div>
+                    </Link>
                         <button type="button" className="cursor-pointer"  aria-label = "Toggle Navigation Menu Button" onClick={handleClick}>
                             {isClickNavButton ?
                             <img className="w-10 h-10" src={navXButton} alt="Roots And Roof Cebu Architect Navigation Burger Button" aria-label="Roots And Roof Cebu Architect Navigation Burger Button"/> 

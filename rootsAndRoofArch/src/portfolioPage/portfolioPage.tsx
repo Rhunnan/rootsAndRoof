@@ -39,13 +39,21 @@ export default function PortfolioPage(){
                 "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-4.webp",
                 "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-5.webp",
                 "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-6.webp",
-                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-7.webp",
-                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-8.webp",
-                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-9.webp",
-                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-10.webp",
+                // "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-8.webp",
+                // "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-9.webp",
+                // "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-10.webp",
+                // "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-12.webp",
+                // "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-13.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-14.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-15.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-16.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-17.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-18.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-19.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-20.webp",
                 "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-11.webp",
-                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-12.webp",
-                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-13.webp",
+                "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-7.webp",
+
               ];  
         setImages(imgArray);
         setLoading(false);
