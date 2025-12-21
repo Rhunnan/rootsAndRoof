@@ -21,6 +21,7 @@ import FooterComponent from '../components/footer';
 import LoadingSpinner from '../components/spinner';
 import ImageWithSkeleton from '../components/imageWithSkeleton';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 
 export default function PortfolioPage(){
@@ -61,14 +62,68 @@ export default function PortfolioPage(){
         
         loadImages();
     }, []);
-    return (<>
 
+    
+    const collectionPageSchema = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": "https://www.rootsnroof.com/portfolio",
+      "name": "Architecture Portfolio – Roots & Roof Designers Inc.",
+      "description":
+        "A curated portfolio showcasing biophilic, sustainable, and regenerative architecture projects by Roots & Roof Designers Inc.",
+      "url": "https://www.rootsnroof.com/portfolio",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Roots & Roof Designers Inc.",
+        "url": "https://www.rootsnroof.com"
+      }
+    }
+
+    const imageGallerySchema = {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Roots & Roof Architecture Projects",
+      "image": images.slice(0, 6).map((img, i) => ({
+        "@type": "ImageObject",
+        "contentUrl": img,
+        "caption": `Biophilic architecture project ${i + 1} by Roots & Roof Designers Inc.`
+      }))
+    };
+
+
+   
+
+    return (
+    <>
+    <Helmet>
+        <title>Architecture Portfolio | Roots & Roof Designers Inc.</title>
+        <meta
+        name="description"
+        content="We see architecture as a natural extension of the Earth. Through permaculture and biophilic design, we craft environments that nurture ecological balance, enhance wellbeing, and inspire harmony between people and nature."
+        />
+        <link
+          rel="canonical"
+          href="https://www.rootsnroof.com/portfolio"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Architecture Portfolio | Roots & Roof Designers Inc." />
+        <meta property="og:description" content="Biophilic and sustainable architecture projects by Roots & Roof Designers Inc." />
+        <meta property="og:image" content="https://www.rootsnroof.com/preview.png" />
+        <meta property="og:url" content="https://www.rootsnroof.com/portfolio" />
+
+        <script type="application/ld+json">
+          {JSON.stringify(collectionPageSchema)}
+          {JSON.stringify(imageGallerySchema)}
+        </script>
+  
+    </Helmet>
     <main className='flex flex-col items-center relative min-h-screen h-auto w-screen'>
         <NavBar/>
         <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-bottom bg-cover' style={{backgroundImage: `url(${bgHero})`}}>
-          <h2 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
+          <h1 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
             <span className='text-4xl md:text-6xl font-bold'>Portfolio Page</span><br/><span className='text-2xl'>WHERE NATURE MEETS DESIGN</span>
-          </h2>
+          </h1>
         </section>
         <h3 className='text-sm md:text-2xl lg:text-3xl pt-10'>BIOPHILIC DESIGNS</h3>
         <h2 className='pt-2 pb-10 text-3xl md:text-5xl semi-bold  font-bold  tracking-wider'>PROJECT GALLERY</h2>
@@ -101,11 +156,9 @@ export default function PortfolioPage(){
                             setIndexClicked(indexClicked - 1);
                         }
                     } } className="absolute top-8/12 md:top-9/12 lg:top-60 left-25 md:left-40 z-30  ml-10 text-white text-[50px] md:text-[100px] lg:akiro-hover-text akiro-active-text select-none">{"<"}</button>
-                    <img src={images[indexClicked]} alt="akiroconstruction gallery image" className="absolute z-20 lg:h-[60vh] w-[90vw] md:w-[90vw] lg:w-[50vw]" />
+                    <img src={images[indexClicked]}alt="Biophilic architecture project by Roots & Roof Designers Inc. in Cebu" className="absolute z-20 lg:h-[60vh] w-[90vw] md:w-[90vw] lg:w-[50vw]" />
                 </div>
-        
     </main>
     </>
     );
-
 }

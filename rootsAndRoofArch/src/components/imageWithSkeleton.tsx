@@ -24,7 +24,8 @@ export default function ImageWithSkeleton({ index, src, indexImageClick, isImage
       <img
         key={index}
         src={error ? "/akiro-logo.png" : src}
-        alt="akiro construction and supply cebu construction - gallery image"
+        alt="Biophilic residential architecture project by Roots & Roof Designers Inc. in Cebu"
+        loading="lazy"
         onLoad={() => setLoaded(true)}
         onError={() => {
           setError(true);

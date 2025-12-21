@@ -7,17 +7,87 @@ import Services from './components/services';
 import HomeAboutSection from './components/homePageAboutSection';
 import FeaturedProject from './components/featuredProject';
 import Slider from './components/slider';
+import { Helmet } from "react-helmet-async";
 
 export default function HomePage(){
+
+      const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Roots & Roof Designers Inc.",
+      logo: "https://www.rootsnroof.com/logornr.png",
+      image: "https://www.rootsnroof.com/preview.png",
+      url: "https://www.rootsnroof.com",
+      "@id": "https://www.rootsnroof.com/#organization",
+      telephone: "+63917-180-1858",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "",
+        addressLocality: "Talisay City, Cebu",
+        addressRegion: "Cebu",
+        postalCode: "6000",
+        addressCountry: "PH",
+      },
+      sameAs: [
+        "https://www.facebook.com/people/Roots-and-Roof-Architects/61580777288357/",
+      ],
+
+      description:
+        "Roots & Roof was founded by a diverse team of architects, engineers, and sustainability advocates united by one vision: to build with nature, not against it. Today, we lead the way in green architecture, transforming both urban and rural landscapes into regenerative, thriving ecosystems, inspired by ecological systems and the healing power of nature.",
+      serviceType: [
+        "Feasibility Studies",
+        "Site Selection and Analysis",
+        "Site Utilization and Land-Use Studies",
+        "Schematic Design",
+        "Contract Document Phase",
+        "Design Development Phase",
+        "Quality Control",
+        "Evaluation of Construction Work",
+        "Preparation of Daily Inspection Reports",
+        "Design",
+        "Post Construction Services",
+        "Site Supervision & Quality Control"
+      ],
+      knowsAbout: [
+              "Architecture",
+              "Construction",
+              "Biophilic Design",
+              "Aquaponics",
+              "Permaculture",
+              "sustainability",
+              "Composting",
+          ],
+      areaServed: "Cebu Philippines, and International Countries",
+      slogan: "To design sustainable, regenerative, and nature-connected spaces that support wellbeing and protect the planet, and inspire a harmonious coexistence with nature.",
+      // founder: {
+      //   "@type": "Person",
+      //   name: "Kim Encabo Torrequemada" 
+      // },
+      brand: {
+        "@type": "Brand",
+        name: "RootsnRoof | Roots and Roof Acrchitects | Cebu"
+      },
+    };
+
     return (
-        <>
+      <>
+      <Helmet>
+        <title>Roots and Roof Architects | Home </title>
+        <meta
+          name="description"
+          content="Roots & Roof was founded by a diverse team of architects, engineers, and sustainability advocates united by one vision: to build with nature, not against it. Today, we lead the way in green architecture, transforming both urban and rural landscapes into regenerative, thriving ecosystems, inspired by ecological systems and the healing power of nature."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
+      </Helmet>
       <main className='flex flex-col items-center relative min-h-screen h-auto w-screen'>
         <NavBar/>
         {/* HeroSection */}
         <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-bottom bg-cover' style={{backgroundImage: `url(https://rootsnroof-663b5.web.app/firebase-images/homePage/bg-hero.webp)`}}>
-          <h2 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
+          <h1 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
             <span className='fade-in-normal text-4xl font-semibold md:text-7xl lg:font-normal'>BIOPHILIC HOMES</span><br/><span className='fade-in-slow text-2xl font-normal'>WHERE NATURE MEETS DESIGN</span>
-          </h2>
+          </h1>
         </section>
         {/* carprocedure services */}
         <Services/>
