@@ -79,20 +79,6 @@ export default function PortfolioPage(){
       }
     }
 
-    const imageGallerySchema = {
-      "@context": "https://schema.org",
-      "@type": "ImageGallery",
-      "name": "Roots & Roof Architecture Projects",
-      "image": images.slice(0, 6).map((img, i) => ({
-        "@type": "ImageObject",
-        "contentUrl": img,
-        "caption": `Biophilic architecture project ${i + 1} by Roots & Roof Designers Inc.`
-      }))
-    };
-
-
-   
-
     return (
     <>
     <Helmet>
@@ -114,7 +100,6 @@ export default function PortfolioPage(){
 
         <script type="application/ld+json">
           {JSON.stringify(collectionPageSchema)}
-          {JSON.stringify(imageGallerySchema)}
         </script>
   
     </Helmet>
