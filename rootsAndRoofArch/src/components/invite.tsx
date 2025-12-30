@@ -23,7 +23,7 @@ export default function InviteComponent(){
                             <Link className="roots-btn-hover-color text-shadow-2xs text-sm md:text-2xl font-light" to="/contact">Start Your Project</Link>
                         </div>
                         <div className='transition-all duration-500 ease-in-out flex justify-center items-center text-white roots-btn-color text-[20px] w-auto h-10 rounded-[5px] px-6 py-2'>
-                            <Link className="roots-btn-hover-color text-shadow-2xs text-sm md:text-2xl font-light" to="/portfolio">Learn More</Link>
+                            <Link className="roots-btn-hover-color text-shadow-2xs text-sm md:text-2xl font-light" to="/portfolio" aria-label="View Roots & Roof portfolio">See Our Portfolio</Link>
                         </div>
                     </div>
                     
@@ -35,12 +35,12 @@ export default function InviteComponent(){
                         <p className='text-sm whitespace-pre-line text-center'>Focuses on: Integrating indoor plants, natural light, and natural elements for wellness.</p>
                     </div>
                     <div className='bg-gray-100 h-auto w-[220px]  flex-col justify-center items-center'>
-                        <img src={woodInvite} className="w-50" alt="plant-image, rootsandroof" />
+                        <img src={woodInvite} className="w-50" alt="natural materials, rootsandroof" />
                         <h2  className='font-semibold text-center text-gray-700' >Natural Materials</h2>
                         <p className='text-sm whitespace-pre-line text-center'>Focuses on: The use of wood, stone, and other natural textures/patterns in the design.</p>
                     </div>
                     <div className='bg-gray-100 h-auto w-[220px] flex-col justify-center items-center'>
-                        <img src={integSystems} className="w-50" alt="plant-image, rootsandroof" />
+                        <img src={integSystems} className="w-50" alt="regenarative systems, rootsandroof" />
                         <h2  className='font-semibold text-center text-gray-700'>Regenerative Systems</h2>
                         <p className='text-sm whitespace-pre-line text-center'>Focuses on: The integrated systems like aquaponics, water treatment, and permaculture.</p>
                     </div>

@@ -141,7 +141,7 @@ export default function PortfolioPage(){
                             setIndexClicked(indexClicked - 1);
                         }
                     } } className="absolute top-8/12 md:top-9/12 lg:top-60 left-25 md:left-40 z-30  ml-10 text-white text-[50px] md:text-[100px] lg:akiro-hover-text akiro-active-text select-none">{"<"}</button>
-                    <img src={images[indexClicked]}alt="Biophilic architecture project by Roots & Roof Designers Inc. in Cebu" className="absolute z-20 lg:h-[60vh] w-[90vw] md:w-[90vw] lg:w-[50vw]" />
+                    <img src={images[indexClicked]} alt="Biophilic architecture project by Roots & Roof Designers Inc. in Cebu" className="absolute z-20 lg:h-[60vh] w-[90vw] md:w-[90vw] lg:w-[50vw]" />
                 </div>
     </main>
     </>

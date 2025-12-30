@@ -16,7 +16,7 @@ export default function ContactPage(){
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Home | Root And Roof Architects | Cebu",
-      image: "https://www.rootsnroof.com/preview.png",
+      image: "https://www.rootsnroof.com/logornr.png",
       "@id": "https://rootsnroof.com/contact",
       url: "https://rootsnroof.com/contact",
       telephone: "+639171801858",
@@ -246,8 +246,8 @@ export default function ContactPage(){
         </section>
         <section id="procedureSection" className=" flex flex-col items-center justify-between bg-white w-screen min-h-screen lg:min-h-screen h-auto" >
           {/* procedureSection */}
-          <h3 className='text-sm md:text-2xl lg:text-4xl fade-in-normal'>WELCOME TO ROOTS AND ROOF ARCHITECTURE</h3>
-          <h2 className='p-5 text-2xl md:text-3xl lg:text-5xl font-bold  tracking-wider fade-in-slow'>SERVICES OFFERED</h2>
+          <h2 className='text-sm md:text-2xl lg:text-4xl fade-in-normal'>WELCOME TO ROOTS AND ROOF ARCHITECTURE</h2>
+          <h3 className='p-5 text-2xl md:text-3xl lg:text-5xl font-bold  tracking-wider fade-in-slow'>SERVICES OFFERED</h3>
           {/* procedureContainer */}
           <div className='bg-gray-100 w-screen min-h-[40%] p-5 h-auto flex flex-wrap justify-center items-center gap-8 '>
             <CardProcedure 

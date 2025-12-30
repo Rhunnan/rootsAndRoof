@@ -81,12 +81,12 @@ export default function FeaturedProject(){
                     {project.projectName}
                   </h3>
                   <p className="text-sm mt-1 line-clamp-3">{project.description}</p>
-                  <div className="mt-3">
-                    <button className="btn btn-primary" 
+                  <div className="mt-3 ">
+                    <button className="btn btn-primary hover:cursor-pointer" 
                     onClick={()=> {
                         navigate("/portfolio")
       
-                    }}>Learn More</button>
+                    }}>See Our Portfolio</button>
                   </div>
                 </div>
               </div>

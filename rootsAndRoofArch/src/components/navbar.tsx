@@ -47,7 +47,7 @@ export default function NavBar(){
                         <div id="logo" className='md:h-13 md:w-60'>
                             <img 
                         src={longLogo} 
-                        alt="Your Website Logo" 
+                        alt="rootsnroof Website Logo" 
                         // Make the image always fill the now-responsive parent div
                         className="h-full w-full object-cover" 
                     />
@@ -88,7 +88,7 @@ export default function NavBar(){
                         <div id="logo" className=' h-10 w-50'>
                             <img 
                         src={longLogo} 
-                        alt="Your Website Logo" 
+                        alt="rootnroof Website Logo" 
                         // Make the image always fill the now-responsive parent div
                         className="h-full w-full object-cover" 
                     />
@@ -96,7 +96,7 @@ export default function NavBar(){
                     </Link>
                         <button type="button" className="cursor-pointer"  aria-label = "Toggle Navigation Menu Button" onClick={handleClick}>
                             {isClickNavButton ?
-                            <img className="w-10 h-10" src={navXButton} alt="Roots And Roof Cebu Architect Navigation Burger Button" aria-label="Roots And Roof Cebu Architect Navigation Burger Button"/> 
+                            <img className="w-10 h-10" src={navXButton} alt="Roots And Roof Cebu Architect Navigation Close Button" aria-label="Roots And Roof Cebu Architect Navigation Burger Button"/> 
                              :
                             <img className="w-[50px] h-[50px]" src={navBurgerButton} alt="Roots And Roof Cebu Architect Navigation Burger Button" aria-label="Roots And Roof Cebu Architect Navigation Burger Button"/> }
                         </button>

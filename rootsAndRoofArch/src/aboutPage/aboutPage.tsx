@@ -12,7 +12,7 @@ export default function AboutPage(){
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Roots & Roof Architects | About",
-    image: "https://www.rootsnroof.com/preview.png",
+    image: "https://www.rootsnroof.com/logornr.png",
     "@id": "https://rootsnroof.com/about",  
     url: "https://rootsnroof.com/about",
     telephone: "+639171801858",

@@ -15,8 +15,7 @@ export default function HomePage(){
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Roots & Roof Designers Inc.",
-      logo: "https://www.rootsnroof.com/logornr.png",
-      image: "https://www.rootsnroof.com/preview.png",
+      image: "https://www.rootsnroof.com/logornr.png",
       url: "https://www.rootsnroof.com",
       "@id": "https://www.rootsnroof.com/#organization",
       telephone: "+63917-180-1858",
@@ -99,7 +98,7 @@ export default function HomePage(){
         </div>
         <section className='mt-30 h-auto w-screen flex flex-col '></section>
         <h2 className='p-10 text-2xl md:text-4xl semi-bold tracking-wider'>WHAT IS IN OUR HOMES?</h2>
-        <img aria-label='' src={bioPhilic_Design} className='fade-in-up relative h-[80%] lg:h-[60%] bg-no-repeat bg-bottom bg-fill w-[80%] lg:w-[60%] pb-10 '/>
+        <img alt='Components of Bioplhic Design at Root and Roof Architects' aria-label='Components of Bioplhic Design at Root and Roof Architects' src={bioPhilic_Design} className='fade-in-up relative h-[80%] lg:h-[60%] bg-no-repeat bg-bottom bg-fill w-[80%] lg:w-[60%] pb-10 '/>
         <section  className='fade-in-up relative h-auto min-h-[50vh] md:h-[70vh] lg:h-[80vh] w-screen pb-10' >
           <h2 className='pl-25 text-4xl w-[90%] text-[13px] md:text-2xl lg:text-3xl text-black'>
               What makes our design revolutionary is the seamless integration of natural phenomena
