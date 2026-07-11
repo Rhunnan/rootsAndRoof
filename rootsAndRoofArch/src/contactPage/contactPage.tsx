@@ -1,307 +1,648 @@
-import NavBar from "../components/navbar";
-import bgHero from "../assets/bg-hero-4.webp"
-import FooterComponent from "../components/footer";
-import InviteComponent from "../components/invite";
-import procedure1 from '../assets/procedure-1.webp'
-import procedure3 from '../assets/procedure-2.webp'
-import procedure2 from '../assets/procedue-3.webp'
-import CardProcedure from "../components/cards";
-import AnimationObserver from "../components/observerAnimation";
 import { Helmet } from "react-helmet-async";
 import { useRef, useState } from "react";
-import ReCAPTCHA from 'react-google-recaptcha';
+import type React from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
-export default function ContactPage(){
+import NavBar from "../components/navbar";
+import FooterComponent from "../components/footer";
+import InviteComponent from "../components/invite";
+
+export default function ContactPage() {
   const jsonLd = {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      name: "Home | Root And Roof Architects | Cebu",
-      image: "https://www.rootsnroof.com/logornr.png",
-      "@id": "https://rootsnroof.com/contact",
-      url: "https://rootsnroof.com/contact",
-      telephone: "+639171801858",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "",
-        addressLocality: "Talisay City, Cebu",
-        addressRegion: "Cebu",
-        postalCode: "6000",
-        addressCountry: "PH",
-      },
-      description:
-        "Roots & Roof Designers Inc. is an innovative architecture firm reshaping the future of sustainable living. We fuse permaculture, biophilic design, aquaponics technology, advance waste water treatment systems, back to Eden gardening, and food forest systems to create regenerative spaces where architecture becomes a living extension of nature",
-      serviceType: [
-        "Feasibility Studies",
-        "Site Selection and Analysis",
-        "Site Utilization and Land-Use Studies",
-        "Schematic Design",
-        "Contract Document Phase",
-        "Design Development Phase",
-        "Quality Control",
-        "Evaluation of Construction Work",
-        "Preparation of Daily Inspection Reports",
-        "Design",
-        "Post Construction Services",
-        "Site Supervision & Quality Control"
-      ],
-      sameAs: [
-        "https://www.facebook.com/people/Roots-and-Roof-Architects/61580777288357/",
-      ],
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Roots & Roof Designers Inc.",
+    image: "https://www.rootsnroof.com/logornr.png",
+    "@id": "https://rootsnroof.com/contact",
+    url: "https://rootsnroof.com/contact",
+    telephone: "+639171801858",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Talisay City",
+      addressRegion: "Cebu",
+      postalCode: "6000",
+      addressCountry: "PH",
+    },
+    description:
+      "Roots & Roof Designers Inc. creates regenerative architecture through sustainable design, biophilic principles, permaculture, aquaponics and environmentally responsible planning.",
+    sameAs: [
+      "https://www.facebook.com/people/Roots-and-Roof-Architects/61580777288357/",
+    ],
+  };
 
-      knowsAbout: [
-              "Architecture",
-              "Construction",
-              "Biophilic Design",
-              "Aquaponics",
-              "Permaculture",
-              "sustainability",
-              "Composting",
-          ],
-      areaServed: "Cebu Philippines, and International Countries",
-      slogan: "Roots & Roof Designers Inc. is an innovative architecture firm reshaping the future of sustainable living. We fuse permaculture, biophilic design, aquaponics technology, advance waste water treatment systems, back to Eden gardening, and food forest systems to create regenerative spaces where architecture becomes a living extension of nature",
-      // founder: {
-      //   "@type": "Person",
-      //   name: "Kim Encabo Torrequemada" 
-      // },
-      brand: {
-        "@type": "Brand",
-        name: "RootsnRoof | Roots and Roof Acrchitects | Cebu"
-      },
-    };  
+  const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
-    
-    const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
-    const [email, setEmail] = useState<string>("");
-    const [name, setName] = useState<string>("");
-    const [phone, setPhone] = useState<string>("");
-    const [message, setMessage] = useState<string>("");
-   
-    const handleEmailChange = (e:React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
-    const handleNameChange = (e:React.ChangeEvent<HTMLInputElement>) => setName(e.target.value);
-    const handlePhoneChange = (e:React.ChangeEvent<HTMLInputElement>) => setPhone(e.target.value);
-    const handleMessageChange = (e:React.ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
-    const recaptchaRef = useRef<ReCAPTCHA | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setName(e.target.value);
 
-        if (!recaptchaRef.current) {
-            console.error("reCAPTCHA ref not available");
-            return;
-        }
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setEmail(e.target.value);
 
-        try {
-            const token = await recaptchaRef.current.executeAsync();
-            console.log("reCAPTCHA token:", token);  // This is normal
-            recaptchaRef.current.reset();
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setPhone(e.target.value);
 
-            if (!token) {
-                console.error("reCAPTCHA token is null");
-                alert("Please complete the reCAPTCHA.");
-                return;
-            }
+  const handleMessageChange = (
+    e: React.ChangeEvent<HTMLTextAreaElement>
+  ) => setMessage(e.target.value);
 
-            const formData = new FormData();
-            formData.append("email", email);
-            formData.append("name", name);
-            formData.append("phone", phone);
-            formData.append("message", message);
-            formData.append("token", token);
-            // for testing
-            // const response = await fetch("http://localhost/rootsnroof-website/email.php", {
-              //for production mode
-            const response = await fetch("https://rootsnroof.com/email.php", {
-                method: "POST",
-                body: formData,
-            });
+  // submit function goes in Part 2
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-            const result = await response.json();
+  if (!recaptchaRef.current) return;
 
-            if (!response.ok) {
-                alert(result.message || "There was an error sending the message.");
-                throw new Error(result.message || "Unknown error from server.");
-            }
+  try {
+    const token = await recaptchaRef.current.executeAsync();
+    recaptchaRef.current.reset();
 
-            alert(result.message || "Message Sent Successfully!");
-            setEmail("");
-            setName("");
-            setPhone("");
-            setMessage("");
-        } catch (error: any) {
-            console.error("Error sending Email", error.message);
-            alert("There was an error sending the message. Please try again later.");
-        }
-    };
+    if (!token) {
+      alert("Please complete the reCAPTCHA.");
+      return;
+    }
 
-    return (<>
-    <Helmet>
-      <title>Contact | Roots & Roof Architects | Cebu</title>
-      <meta
-        name="description"
-        content="Get in touch with Roots & Roof Designers Inc., Cebu. We specialize in sustainable architecture, biophilic design, aquaponics, permaculture, and regenerative living spaces."
-      />
-      <link rel="canonical" href="https://rootsnroof.com/contact" />
+    const formData = new FormData();
+    formData.append("email", email);
+    formData.append("name", name);
+    formData.append("phone", phone);
+    formData.append("message", message);
+    formData.append("token", token);
 
-      {/* Open Graph */}
-      <meta property="og:title" content="Contact | Roots & Roof Architects | Cebu" />
-      <meta property="og:description" content="Connect with Roots & Roof Designers Inc., Cebu for innovative sustainable architecture services." />
-      <meta property="og:image" content="https://www.rootsnroof.com/preview.png" />
-      <meta property="og:url" content="https://rootsnroof.com/contact" />
-      <meta property="og:type" content="website" />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Contact | Roots & Roof Architects | Cebu" />
-      <meta name="twitter:description" content="Connect with Roots & Roof Designers Inc., Cebu for innovative sustainable architecture services." />
-      <meta name="twitter:image" content="https://www.rootsnroof.com/preview.png" />
-
-      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    </Helmet>
-
-    <main className='flex flex-col items-center relative min-h-screen h-auto w-screen'>
-        <NavBar/>
-        <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-position-[center_20%] md:bg-position-[center_70%] bg-cover' style={{backgroundImage: `url(https://rootsnroof-663b5.web.app/firebase-images/bg-hero-4.webp)`}}>
-          <h2 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
-            <span className='fade-in-normal text-4xl font-semibold md:text-7xl lg:font-normal'>Contact Page</span><br/><span className='text-2xl'>WHERE NATURE MEETS DESIGN</span>
-          </h2>
-        </section>
-        
-        <section className='fade-in-up min-h-screen h-auto w-screen'>
-          {/* lets connect div container */}
-          <div className="flex flex-col justify-center h-[10vh] md:h-[15vh] lg:h-[20vh] w-screen roots-btn-color">
-            <h2 className="pl-15 md:pl-20 lg:pl-40 text-3xl md:text-6xl lg:text-7xl font-semibold text-white">LET'S CONNECT</h2>
-            <p className=" pl-28 md:pl-38 lg:pl-58 md:text-3xl lg:text-4xl font-normal text-white">BUILD YOUR FUTURE</p>
-          </div>
-          {/* form and map continer */}
-          <AnimationObserver>
-             <div className="w-screen min-h-[70vh] h-auto flex flex-col lg:flex-row">
-            {/* forms */}
-            <div className="my-5 flex flex-col gap-y-10 justify-center items-center min-h-[50vh] lg:min-h-[80vh] h-auto w-screen lg:w-[50vw]">
-              <form id="contactForm" name="contactForm" onSubmit={handleSubmit} className="h-auto w-[80%] p-5 lg:w-[70%] lg:min-h-[65%] flex flex-col items-center justify-center gap-y-8 roots-btn-color rounded-2xl">
-                <input 
-                type="text" 
-                placeholder="Full Name" 
-                name="name"
-                id="name"
-                value={name}
-                onChange={handleNameChange}
-                className="pl-3 w-[85%] h-[45px] text-xl rounded-md text-input-color" />
-                <input 
-                  type="text" 
-                  placeholder="Email Address" 
-                  name="email"
-                  id="email"
-                  value={email}
-                  onChange={handleEmailChange}
-                  className="pl-3 w-[85%] h-[45px] text-xl rounded-md text-input-color" 
-                />
-                <input 
-                  type="text"
-                  placeholder="Contact Number"
-                  autoComplete="tel"
-                  value={phone}
-                  onChange={handlePhoneChange}
-                  required
-                  name="phone"
-                  id="phone"
-                  className="pl-3 w-[85%] h-[45px] text-xl rounded-md text-input-color" 
-                />
-                <textarea
-                  placeholder="Message"
-                  autoComplete="off"
-                  aria-required
-                    value={message}
-                    onChange={handleMessageChange}
-                    id="message"
-                    name="message"
-                    rows={5}                        required
-                   className=" pl-3 w-[85%] h-auto min-h-20 text-xl rounded-md text-input-color" />
-                   <div className='transition-all duration-500 ease-in-out flex justify-center items-center active:bg-green-200 hover:bg-green-100 akiro-bg-btn border border-white hover:text-gray-400 text-white text-[20px] w-auto h-10 rounded-[5px] px-6 py-2'>
-                      {/* //button */}
-                      <button type="submit" className="roots-btn-hover-color text-shadow-2xs text-sm md:text-2xl font-light">SEND MESSAGE</button>
-                    </div>
-              </form>
-            </div>
-            {/* map */}
-            <div className="flex flex-col w-screen lg:w-[50vw] min-h-[30vh] lg:min-h-[50vh] gap-y-5 items-center lg:items-start justify-center h-auto relative" >
-                <div>
-                  <h2 className="text-md md:text-2xl font-light"><span className="text-xl md:text-3xl font-light">EMAIL:</span> info@rootsnroof.com</h2>
-                  <p className="text-sm md:text-2xl font-light"><span className="text-xl  md:text-3xl font-light">ADDRESS:</span> Talisay City, Cebu Philippines, 6045</p>
-                </div>
-                <iframe
-                  aria-label="Map or Location of akiroconstruction cebu"
-                  title="Akiro Construction and Supply Location"
-                  className="w-[80%] h-[20vh] lg:w-[80%] lg:h-[50vh] border-0 rounded-2xl"
-                  loading="lazy"
-                  allowFullScreen
-                  src="https://maps.google.com/maps?width=600&height=400&hl=en&q=villa%20raya%20talisay&t=&z=14&ie=UTF8&iwloc=B&output=embed"
-                >
-                </iframe>
-            </div>
-          </div>
-          </AnimationObserver>
-        </section>    
-        <section className='flex flex-wrap justify-center items-center gap-8 md:w-screen lg:w-[70%] h-auto' > 
-        </section>
-        <section id="procedureSection" className=" flex flex-col items-center justify-between bg-white w-screen min-h-screen lg:min-h-screen h-auto" >
-          {/* procedureSection */}
-          <h2 className='text-sm md:text-2xl lg:text-4xl fade-in-normal'>WELCOME TO ROOTS AND ROOF ARCHITECTURE</h2>
-          <h3 className='p-5 text-2xl md:text-3xl lg:text-5xl font-bold  tracking-wider fade-in-slow'>SERVICES OFFERED</h3>
-          {/* procedureContainer */}
-          <div className='bg-gray-100 w-screen min-h-[40%] p-5 h-auto flex flex-wrap justify-center items-center gap-8 '>
-            <CardProcedure 
-              number={1} 
-              title="PRE-DESIGN" 
-              description={`Feasibility Studies
-                Site Selection and Analysis
-                Site Utilization and Land-Use Studies
-                `}
-              imagePath={procedure1}
-              animation="slideFromLeftFast"
-          />
-            <CardProcedure 
-              number={2} 
-              title="ARCHITECTURAL DESIGN" 
-              description={`Schematic Design
-                Contract Document Phase
-                Design Development Phase
-                `}
-              imagePath={procedure2}
-              animation="slideFromLeftNormal"
-              />
-            <CardProcedure 
-              number={3} 
-              title="SUPERVISION" 
-              description={`Quality Control
-                Evaluation of Construction Work
-                Preparation of Daily Inspection Reports`}
-              imagePath={procedure3}
-              animation="slideFromLeftSlow"
-              />
-            <CardProcedure 
-              number={4} 
-              title="ARCH & ENGR DESIGN" 
-              description={`Design
-                Post Construction Services
-                Site Supervision & Quality Control
-                `} 
-              imagePath={bgHero}
-              animation="slideFromLeftVerySlow"
-              />
-          </div>
-        </section>
-        <InviteComponent isProjectPage={false}/>
-        <FooterComponent/>   
-        <ReCAPTCHA
-                    //for testing
-                    // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-          sitekey={siteKey}
-          size="invisible"
-          ref={recaptchaRef}
-        />
-    </main>
-    </>
+    const response = await fetch(
+      "https://rootsnroof.com/email.php",
+      {
+        method: "POST",
+        body: formData,
+      }
     );
 
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message);
+    }
+
+    alert(result.message || "Message sent successfully!");
+
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+  } catch (err) {
+    console.error(err);
+    alert("Unable to send message.");
+  }
+};
+
+  return (
+    <>
+      <Helmet>
+        <title>Contact | Roots & Roof Architects | Cebu</title>
+
+        <meta
+          name="description"
+          content="Connect with Roots & Roof Designers Inc. for architecture, biophilic design, regenerative planning, and sustainable residential and commercial projects."
+        />
+
+        <link
+          rel="canonical"
+          href="https://rootsnroof.com/contact"
+        />
+
+        <meta
+          property="og:title"
+          content="Contact | Roots & Roof Architects"
+        />
+
+        <meta
+          property="og:description"
+          content="Let's create architecture inspired by nature."
+        />
+
+        <meta
+          property="og:image"
+          content="https://www.rootsnroof.com/preview.png"
+        />
+
+        <meta
+          property="og:url"
+          content="https://rootsnroof.com/contact"
+        />
+
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
+      </Helmet>
+
+      <main className="bg-[#F8F6F2] text-[#2D2A26] overflow-hidden">
+
+        <NavBar />
+
+        {/* ================================================= */}
+        {/* HERO */}
+        {/* ================================================= */}
+
+        <section
+            className="relative h-screen bg-cover bg-center"          
+            style={{
+            backgroundImage:
+              "url(https://rootsnroof-663b5.web.app/firebase-images/bg-hero-4.webp)",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/45" />
+
+          <div className="relative z-10 h-full flex items-end">
+
+            <div className="max-w-7xl mx-auto w-full px-6 lg:px-10 pb-20">
+
+              <p className="uppercase tracking-[0.35em] text-sm text-[#D6D1C4]">
+
+                Contact
+
+              </p>
+
+              <h1 className="mt-6 text-4xl md:text-6xl xl:text-7xl font-light text-white leading-tight">
+
+                Let's Create
+
+                <br />
+
+                Something Timeless.
+
+              </h1>
+
+              <p className="mt-8 max-w-2xl text-lg md:text-xl text-gray-200 leading-8">
+
+                Every meaningful space begins with a conversation.
+                We'd love to hear your vision and explore how
+                architecture can bring it to life.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        {/* ================================================= */}
+        {/* INTRO */}
+        {/* ================================================= */}
+
+        <section className="py-28">
+
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+
+            <div className="max-w-3xl">
+
+              <p className="uppercase tracking-[0.35em] text-sm text-[#66714B]">
+
+                Get In Touch
+
+              </p>
+
+              <h2 className="mt-6 text-4xl lg:text-6xl font-semibold leading-tight">
+
+                Let's discuss your next project.
+
+              </h2>
+
+              <div className="mt-8 w-24 h-[2px] bg-[#D6D1C4]" />
+
+              <p className="mt-10 text-lg text-gray-600 leading-9">
+
+                Whether you're planning a private residence,
+                commercial development, hospitality project,
+                or a regenerative masterplan, our team is ready
+                to collaborate with you from concept through
+                completion.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        {/* ================================================= */}
+        {/* CONTACT SECTION */}
+        {/* ================================================= */}
+
+        <section className="pb-32">
+
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+
+            <div className="grid lg:grid-cols-2 gap-20">
+
+              {/* LEFT */}
+
+              <div>
+
+                <p className="uppercase tracking-[0.35em] text-sm text-[#66714B]">
+
+                  Contact Information
+
+                </p>
+
+                <div className="mt-12 space-y-10">
+
+                  <div>
+
+                    <h3 className="text-lg uppercase tracking-[0.2em] text-[#66714B]">
+
+                      Email
+
+                    </h3>
+
+                    <p className="mt-3 text-2xl font-light">
+
+                      info@rootsnroof.com
+
+                    </p>
+
+                  </div>
+
+                  <div>
+
+                    <h3 className="text-lg uppercase tracking-[0.2em] text-[#66714B]">
+
+                      Phone
+
+                    </h3>
+
+                    <p className="mt-3 text-2xl font-light">
+
+                      +63 917 180 1858
+
+                    </p>
+
+                  </div>
+
+                  <div>
+
+                    <h3 className="text-lg uppercase tracking-[0.2em] text-[#66714B]">
+
+                      Office
+
+                    </h3>
+
+                    <p className="mt-3 text-xl leading-8 font-light text-gray-600">
+
+                      Talisay City
+
+                      <br />
+
+                      Cebu, Philippines
+
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              {/* RIGHT */}
+
+<div>
+
+  <p className="uppercase tracking-[0.35em] text-sm text-[#66714B]">
+
+    Send an Inquiry
+
+  </p>
+
+  <form
+    className="mt-12 bg-white border border-[#E7E1D8] shadow-xl p-10 lg:p-14"
+    onSubmit={handleSubmit}
+  >
+
+    <div className="space-y-8">
+
+      <div>
+
+        <label className="block uppercase tracking-[0.25em] text-xs text-[#66714B] mb-3">
+
+          Full Name
+
+        </label>
+
+        <input
+          type="text"
+          value={name}
+          onChange={handleNameChange}
+          required
+          className="
+            w-full
+            h-14
+            px-5
+            border
+            border-[#D8D2C8]
+            bg-white
+            outline-none
+            transition
+            focus:border-[#66714B]
+          "
+        />
+
+      </div>
+
+      <div>
+
+        <label className="block uppercase tracking-[0.25em] text-xs text-[#66714B] mb-3">
+
+          Email Address
+
+        </label>
+
+        <input
+          type="email"
+          value={email}
+          onChange={handleEmailChange}
+          required
+          className="
+            w-full
+            h-14
+            px-5
+            border
+            border-[#D8D2C8]
+            bg-white
+            outline-none
+            transition
+            focus:border-[#66714B]
+          "
+        />
+
+      </div>
+
+      <div>
+
+        <label className="block uppercase tracking-[0.25em] text-xs text-[#66714B] mb-3">
+
+          Contact Number
+
+        </label>
+
+        <input
+          type="text"
+          value={phone}
+          onChange={handlePhoneChange}
+          required
+          className="
+            w-full
+            h-14
+            px-5
+            border
+            border-[#D8D2C8]
+            bg-white
+            outline-none
+            transition
+            focus:border-[#66714B]
+          "
+        />
+
+      </div>
+
+      <div>
+
+        <label className="block uppercase tracking-[0.25em] text-xs text-[#66714B] mb-3">
+
+          Tell us about your project
+
+        </label>
+
+        <textarea
+          rows={7}
+          value={message}
+          onChange={handleMessageChange}
+          required
+          className="
+            w-full
+            p-5
+            border
+            border-[#D8D2C8]
+            bg-white
+            outline-none
+            resize-none
+            transition
+            focus:border-[#66714B]
+          "
+        />
+
+      </div>
+
+    </div>
+
+    <button
+      type="submit"
+      className="
+        mt-10
+        bg-[#66714B]
+        hover:bg-[#556041]
+        transition-all
+        duration-300
+        text-white
+        uppercase
+        tracking-[0.3em]
+        px-10
+        py-5
+        text-sm
+      "
+    >
+      Send Inquiry
+    </button>
+
+  </form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+        {/* ================================================= */}
+        {/* LOCATION */}
+        {/* ================================================= */}
+
+        <section className="py-28 bg-white">
+
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+
+            <p className="uppercase tracking-[0.35em] text-sm text-[#66714B]">
+
+              Visit Us
+
+            </p>
+
+            <h2 className="mt-5 text-4xl lg:text-5xl font-semibold">
+
+              Our Studio Location
+
+            </h2>
+
+            <div className="mt-8 w-24 h-[2px] bg-[#D6D1C4]" />
+
+            <iframe
+              title="Roots & Roof Location"
+              loading="lazy"
+              allowFullScreen
+              className="
+                mt-12
+                w-full
+                h-[550px]
+                rounded-sm
+                border-0
+                shadow-xl
+              "
+              src="https://maps.google.com/maps?width=600&height=400&hl=en&q=villa%20raya%20talisay&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+            />
+
+          </div>
+
+        </section>
+
+        {/* ================================================= */}
+        {/* DESIGN PROCESS */}
+        {/* ================================================= */}
+
+        <section className="py-32 bg-[#F8F6F2]">
+
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+
+            <p className="uppercase tracking-[0.35em] text-sm text-[#66714B] text-center">
+
+              Our Process
+
+            </p>
+
+            <h2 className="mt-5 text-center text-4xl lg:text-5xl font-semibold">
+
+              How We Bring Ideas To Life
+
+            </h2>
+
+            <div className="mx-auto mt-8 w-24 h-[2px] bg-[#D6D1C4]" />
+
+            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-16 mt-24">
+
+              <div>
+
+                <span className="text-6xl font-light text-[#D6D1C4]">
+
+                  01
+
+                </span>
+
+                <h3 className="mt-8 text-2xl font-semibold">
+
+                  Discovery
+
+                </h3>
+
+                <p className="mt-5 text-gray-600 leading-8">
+
+                  Understanding your vision, goals, site conditions,
+                  and aspirations before beginning the design journey.
+
+                </p>
+
+              </div>
+
+              <div>
+
+                <span className="text-6xl font-light text-[#D6D1C4]">
+
+                  02
+
+                </span>
+
+                <h3 className="mt-8 text-2xl font-semibold">
+
+                  Design
+
+                </h3>
+
+                <p className="mt-5 text-gray-600 leading-8">
+
+                  Crafting thoughtful spaces inspired by nature,
+                  sustainability, and timeless architectural principles.
+
+                </p>
+
+              </div>
+
+              <div>
+
+                <span className="text-6xl font-light text-[#D6D1C4]">
+
+                  03
+
+                </span>
+
+                <h3 className="mt-8 text-2xl font-semibold">
+
+                  Documentation
+
+                </h3>
+
+                <p className="mt-5 text-gray-600 leading-8">
+
+                  Producing detailed architectural and engineering
+                  drawings ready for approvals and construction.
+
+                </p>
+
+              </div>
+
+              <div>
+
+                <span className="text-6xl font-light text-[#D6D1C4]">
+
+                  04
+
+                </span>
+
+                <h3 className="mt-8 text-2xl font-semibold">
+
+                  Construction Support
+
+                </h3>
+
+                <p className="mt-5 text-gray-600 leading-8">
+
+                  Collaborating closely throughout construction
+                  to ensure every detail is executed as intended.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <InviteComponent isProjectPage={false} />
+
+        <FooterComponent />
+
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={siteKey}
+          size="invisible"
+        />
+
+      </main>
+
+    </>
+  );
 }

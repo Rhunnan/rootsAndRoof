@@ -62,16 +62,50 @@ export default function AboutPage(){
 
     <main className='flex flex-col items-center relative min-h-screen h-auto w-screen'>
         <NavBar/>
-        <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-cover' style={{backgroundImage: `url(https://rootsnroof-663b5.web.app/firebase-images/bg-hero-3.webp)`}}>
-          <h2 className='absolute top-1/4 md:top-1/4 left-10 text-4xl text-white w-[90%]'>
-            <span className='fade-in-fast text-3xl md:text-5xl font-bold whitespace-pre-line'>{`Architecture That Breathes\nwith the Planet`}</span><br/>
-            <span className='fade-in-normal text-sm md:text-2xl lg:text-3xl'>Roots & Roof Designers Inc. is an innovative architecture firm reshaping the future of
-              sustainable living. We fuse permaculture, biophilic design, aquaponics technology,
-              advance waste water treatment systems, back to Eden gardening, and food forest
-              systems to create regenerative spaces where architecture becomes a living extension
-              of nature..
-            </span>
-          </h2>
+        <section
+              className="relative w-full h-screen bg-cover bg-center"            style={{
+                backgroundImage:
+                    "url(https://rootsnroof-663b5.web.app/firebase-images/bg-hero-3.webp)",
+            }}
+        >
+            <div className="absolute inset-0 bg-black/45" />
+
+            <div className="relative z-10 h-full flex items-end">
+
+                <div className="max-w-7xl mx-auto w-full px-6 lg:px-10 pb-24">
+
+                    <p className="uppercase tracking-[0.35em] text-sm text-[#D6D1C4]">
+
+                        About Roots & Roof
+
+                    </p>
+
+                    <h1 className="mt-6 text-5xl lg:text-7xl font-light text-white leading-tight">
+
+                        Architecture
+
+                        <br />
+
+                        Inspired
+
+                        <br />
+
+                        By Nature.
+
+                    </h1>
+
+                    <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-200">
+
+                        We believe architecture should exist in harmony with nature,
+                        creating spaces that enrich lives, respect the environment,
+                        and endure beautifully for generations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
         </section>
         <AnimationObserver>
           <MissionComponent/>
@@ -80,7 +114,7 @@ export default function AboutPage(){
           <VisionComponent/>
         </AnimationObserver>
         {/* <TeamComponent/> */}
-        <InviteComponent/>
+        <InviteComponent isProjectPage={false}/>
         <FooterComponent/>       
     </main>
     </>
