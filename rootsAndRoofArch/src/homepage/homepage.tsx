@@ -8,7 +8,7 @@ import HomeAboutSection from './components/homePageAboutSection';
 import FeaturedProject from './components/featuredProject';
 import Slider from './components/slider';
 import { Helmet } from "react-helmet-async";
-
+import HeroBg from "../assets/hero-bg.png"
 export default function HomePage(){
 
       const jsonLd = {
@@ -83,16 +83,163 @@ export default function HomePage(){
       <main className='flex flex-col items-center relative min-h-screen h-auto w-screen'>
         <NavBar/>
         {/* HeroSection */}
-        <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-bottom bg-cover' style={{backgroundImage: `url(https://rootsnroof-663b5.web.app/firebase-images/homePage/bg-hero.webp)`}}>
+        {/* <section id="HomeHero" className='fade-in-up relative h-screen w-screen bg-no-repeat bg-bottom bg-cover' style={{backgroundImage: `url(https://rootsnroof-663b5.web.app/firebase-images/homePage/bg-hero.webp)`}}>
           <h1 className='absolute top-9/12 left-10 md:left-20 text-4xl text-white'>
             <span className='fade-in-normal text-4xl font-semibold md:text-7xl lg:font-normal'>BIOPHILIC HOMES</span><br/><span className='fade-in-slow text-2xl font-normal'>WHERE NATURE MEETS DESIGN</span>
           </h1>
-        </section>
+        </section> */}
+        <section
+    id="HomeHero"
+    className="relative h-screen w-full overflow-hidden"
+>
+
+    {/* Background Image */}
+
+    <div
+        className="absolute inset-0 bg-cover bg-center scale-105"
+        style={{
+            backgroundImage: `url(${HeroBg})`
+                // "url(https://rootsnroof-663b5.web.app/firebase-images/homePage/bg-hero.webp)",
+        }}
+    />
+
+    {/* Dark Overlay */}
+
+    <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/35 to-black/10" />
+
+    {/* Bottom Fade */}
+
+    <div className="absolute bottom-0 h-40 w-full bg-linear-to-t from-[#F8F7F2] to-transparent" />
+
+    {/* Hero Content */}
+
+    <div className="relative z-10 flex h-full max-w-7xl mx-auto items-center px-8 md:px-14 lg:px-20">
+
+        <div className="max-w-3xl">
+
+
+            <h1 className="text-white leading-none">
+
+                <span className="block font-light text-3xl md:text-5xl lg:text-7xl">
+                    Nature is
+                </span>
+
+               
+
+                <span className="block font-light text-3xl md:text-5xl lg:text-7xl">
+                    the New <span className="text-amber-300">Luxury</span>.
+                </span>
+
+            </h1>
+
+            <p className="mt-10 text-white/90 text-lg md:text-xl leading-9 max-w-xl">
+
+                Thoughtfully designed homes that connect people with nature
+                through light, landscape, passive cooling and sustainable
+                architecture.
+
+            </p>
+
+            <div className="mt-12 flex flex-col sm:flex-row gap-5">
+
+                <a
+                    href="/contact"
+                    className="rounded-full bg-[#35543B] hover:bg-[#27402B] transition-all duration-300 px-8 py-4 text-white tracking-wider text-center"
+                >
+                    Schedule Consultation
+                </a>
+
+                <a
+                    href="/portfolio"
+                    className="rounded-full border border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 text-center"
+                >
+                    Explore Projects
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {/* Scroll Indicator */}
+
+    <div className="hidden md:block absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
+
+        <div className="w-0.5 h-12 bg-white mx-auto" />
+
+        <p className="uppercase tracking-[0.3em] text-xs mt-2">
+            Scroll
+        </p>
+
+    </div>
+
+</section>
+<section className="bg-[#F8F7F2] w-full ">
+
+    <div className="w-full mx-auto py-16 px-8 flex justify-around">
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+
+            <div>
+
+                <h2 className="text-5xl font-light text-[#35543B]">
+                    100+
+                </h2>
+
+                <p className="uppercase tracking-widest text-sm mt-2">
+                    Design Concepts
+                </p>
+
+            </div>
+
+            <div>
+
+                <h2 className="text-5xl font-light text-[#35543B]">
+                    Nature
+                </h2>
+
+                <p className="uppercase tracking-widest text-sm mt-2">
+                    First Philosophy
+                </p>
+
+            </div>
+
+            <div>
+
+                <h2 className="text-5xl font-light text-[#35543B]">
+                    Passive
+                </h2>
+
+                <p className="uppercase tracking-widest text-sm mt-2">
+                    Cooling Design
+                </p>
+
+            </div>
+
+            <div>
+
+                <h2 className="text-5xl font-light text-[#35543B]">
+                    Cebu
+                </h2>
+
+                <p className="uppercase tracking-widest text-sm mt-2">
+                    Based Studio
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
         {/* carprocedure services */}
         <Services/>
+        <FeaturedProject />
         <HomeAboutSection/>
-        <FeaturedProject/>
-        <h2 className='p-10 text-3xl md:text-4xl semi-bold  tracking-wider'>Like To See More Of Our Projects ?</h2>
+
+        {/* <h2 className='p-10 text-3xl md:text-4xl semi-bold  tracking-wider'>Like To See More Of Our Projects ?</h2>
         <div className='transition-all duration-500 ease-in-out flex justify-center items-center text-white roots-btn-color text-[20px] w-auto h-10 rounded-[10px] px-6 py-2'>
             <a className="roots-btn-hover-color text-shadow-2xs text-2xl font-light" href="">View our Gallery</a>
         </div>
@@ -120,9 +267,9 @@ export default function HomePage(){
                   air movement to maximize energy efficiency and enhance occupant well-being.'>
                 </Slider>
               </ul>
-          </h2>
-        </section>
-        <InviteComponent/>
+          </h2> */}
+        {/* </section> */}
+        <InviteComponent isProjectPage={false}/>
         {/* footer */}
         <FooterComponent/>
       </main> 

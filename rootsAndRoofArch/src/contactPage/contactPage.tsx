@@ -227,7 +227,7 @@ export default function ContactPage(){
             <div className="flex flex-col w-screen lg:w-[50vw] min-h-[30vh] lg:min-h-[50vh] gap-y-5 items-center lg:items-start justify-center h-auto relative" >
                 <div>
                   <h2 className="text-md md:text-2xl font-light"><span className="text-xl md:text-3xl font-light">EMAIL:</span> info@rootsnroof.com</h2>
-                  <p className="text-sm md:text-2xl font-light"><span className="text-xl  md:text-3xl font-light">ADDRESS:</span> Talisay City, Cebu Philippines, 6000</p>
+                  <p className="text-sm md:text-2xl font-light"><span className="text-xl  md:text-3xl font-light">ADDRESS:</span> Talisay City, Cebu Philippines, 6045</p>
                 </div>
                 <iframe
                   aria-label="Map or Location of akiroconstruction cebu"
@@ -291,7 +291,7 @@ export default function ContactPage(){
               />
           </div>
         </section>
-        <InviteComponent/>
+        <InviteComponent isProjectPage={false}/>
         <FooterComponent/>   
         <ReCAPTCHA
                     //for testing
