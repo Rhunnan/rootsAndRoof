@@ -1,12 +1,10 @@
 // import bgHero from '../assets/homePage/bg-hero.webp'
 import NavBar  from '../components/navbar';
-import bioPhilic_Design from  '../assets/biophilic_design.webp'
 import FooterComponent from '../components/footer';
 import InviteComponent from '../components/invite';
 import Services from './components/services';
 import HomeAboutSection from './components/homePageAboutSection';
 import FeaturedProject from './components/featuredProject';
-import Slider from './components/slider';
 import { Helmet } from "react-helmet-async";
 import HeroBg from "../assets/hero-bg.png"
 export default function HomePage(){

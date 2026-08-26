@@ -143,7 +143,8 @@ export default function Navbar() {
 
   const [mobileOpen, setMobileOpen] = useState(false);
 //im forcing this to be true, if balikon ang transparent just set this to false and uncomment the useEffect
-  const [scrolled, setScrolled] = useState(true);
+  // const [scrolled, setScrolled] = useState(true);
+  const [scrolled] = useState(true);
 
   // useEffect(() => {
   //   const onScroll = () => {
