@@ -76,7 +76,7 @@ export default function InviteComponent({isProjectPage}:props) {
             icon: <Droplets size={34} />,
             title: "Climate Smart",
             description:
-                "Designed specifically for Cebu's tropical climate using passive design strategies."
+                "Designed for your specific location’s climate using passive design strategies."
         }
     ];
 

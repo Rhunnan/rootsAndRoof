@@ -22,10 +22,8 @@ export default function VisionComponent() {
                 font-light
               "
             >
-              We envision a future where architecture becomes an active
-              contributor to ecological restoration—where every building
-              strengthens its environment, enhances human well-being,
-              and coexists naturally with the landscape.
+              We envision a future where <strong>regenerative architecture and biophilic living</strong> create a positive relationship between people and the land.
+              Through <strong>permaculture, soil ecology, food systems, water, and nature inspired design</strong>, we strive to create places that restore ecosystems, nourish communities, and strengthen the environment rather than simply reduce their impact.
             </p>
 
             <p
@@ -37,11 +35,7 @@ export default function VisionComponent() {
                 max-w-3xl
               "
             >
-              Through regenerative design, biophilic principles,
-              permaculture thinking, and innovative sustainable
-              technologies, we aspire to redefine how communities
-              experience architecture—creating spaces that are resilient,
-              timeless, and deeply connected to nature.
+              We believe the future of architecture is not about taking less from nature, it is about giving back more, creating resilient living environments where people, food, and nature can thrive together.
             </p>
 
           </div>
@@ -66,9 +60,7 @@ export default function VisionComponent() {
                 leading-tight
               "
             >
-              Shaping A Future
-              Where Nature
-              Leads Design.
+              Designing Today Without Borrowing From Tomorrow
 
             </h2>
 

@@ -27,7 +27,7 @@ const benefits = [
   {
     title: "Climate Responsive",
     description:
-      "Designed specifically for Cebu's tropical climate to withstand heat and heavy rainfall.",
+      "Designed for your specific location’s climate to withstand heat and heavy rainfall.",
     icon: <CloudRain className="w-7 h-7" />,
     image:
       "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-6.webp",

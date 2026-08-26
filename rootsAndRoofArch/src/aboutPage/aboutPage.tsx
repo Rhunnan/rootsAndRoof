@@ -96,9 +96,7 @@ export default function AboutPage(){
 
                     <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-200">
 
-                        We believe architecture should exist in harmony with nature,
-                        creating spaces that enrich lives, respect the environment,
-                        and endure beautifully for generations.
+                        We believe the future of development is not simply about reducing harm, but restoring what has been damaged through regenerative architecture, biophilic living, permaculture, soil ecology, and food systems that help people and nature thrive together.
 
                     </p>
 

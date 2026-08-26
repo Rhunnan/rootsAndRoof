@@ -3,19 +3,19 @@ import type { Project } from "../homepage/components/featuredProject";
 export const projects: Project[] = [
     {
       title: "Sloping Terrain Residence",
-      location: "Residential • Cebu",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-1.webp",
     },
     {
       title: "Contemporary Residence",
-      location: "Residential • Cebu",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio2.webp",
     },
     {
       title: "Modern Countryside Home",
-      location: "Residential • Cebu",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-3.webp",
     },
@@ -27,43 +27,43 @@ export const projects: Project[] = [
     },
     {
       title: "Forest Residence",
-      location: "Residential",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-5.webp",
     },
     {
       title: "Tropical Home",
-      location: "Residential",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-6.webp",
     },
     {
       title: "Luxury Pavilion",
-      location: "Residential",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-14.webp",
     },
     {
       title: "Garden House",
-      location: "Residential",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-15.webp",
     },
     {
       title: "Nature Courtyard",
-      location: "Residential",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-16.webp",
     },
     {
       title: "Minimal Retreat",
-      location: "Residential",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-17.webp",
     },
     {
       title: "Luxury Estate",
-      location: "Residential",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-18.webp",
     },
@@ -80,14 +80,14 @@ export const projects: Project[] = [
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-20.webp",
     },
     {
-      title: "Courtyard Residence",
-      location: "Residential",
+      title: "Courtyard",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-11.webp",
     },
     {
-      title: "Luxury Interior",
-      location: "Interior",
+      title: "Courtyard",
+      location: "",
       image:
         "https://rootsnroof-663b5.web.app/firebase-images/portfolio/portfolio-7.webp",
     },

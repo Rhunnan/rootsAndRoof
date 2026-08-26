@@ -10,7 +10,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 1,
     title: "Sloping Terrain Residence",
-    location: "Residential • Cebu",
+    location: "",
     description:
       "A luxury residence carefully designed to follow the site's natural terrain while preserving existing vegetation.",
     image:
@@ -20,7 +20,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 2,
     title: "Contemporary Residence",
-    location: "Residential • Cebu",
+    location: "",
     description:
       "Modern tropical architecture emphasizing natural ventilation and daylight.",
     image:
@@ -30,7 +30,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 3,
     title: "Modern Countryside Home",
-    location: "Residential • Cebu",
+    location: "",
     description:
       "A countryside retreat inspired by local materials and sustainable living.",
     image:
@@ -50,7 +50,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 5,
     title: "Garden Residence",
-    location: "Residential • Cebu",
+    location: "",
     description:
       "Nature-centered architecture with integrated green spaces.",
     image:
@@ -70,7 +70,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 7,
     title: "Modern Residence",
-    location: "Residential",
+    location: "",
     description:
       "Elegant contemporary residence with panoramic views.",
     image:
@@ -80,7 +80,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 8,
     title: "Nature Courtyard House",
-    location: "Residential",
+    location: "",
     description:
       "Private courtyard integrated into everyday living spaces.",
     image:
@@ -110,7 +110,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 11,
     title: "Eco Residence",
-    location: "Residential",
+    location: "",
     description:
       "Energy-efficient tropical architecture for modern families.",
     image:
@@ -130,7 +130,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 13,
     title: "Modern Sanctuary",
-    location: "Residential",
+    location: "",
     description:
       "A tranquil sanctuary where architecture and landscape merge.",
     image:
@@ -150,7 +150,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 15,
     title: "Contemporary Hillside Home",
-    location: "Residential",
+    location: "",
     description:
       "Luxury home overlooking the surrounding landscape.",
     image:

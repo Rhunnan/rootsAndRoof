@@ -6,7 +6,7 @@ import Services from './components/services';
 import HomeAboutSection from './components/homePageAboutSection';
 import FeaturedProject from './components/featuredProject';
 import { Helmet } from "react-helmet-async";
-import HeroBg from "../assets/hero-bg.png"
+import HeroBg from "../assets/hero-bg.webp"
 export default function HomePage(){
 
       const jsonLd = {
@@ -119,13 +119,13 @@ export default function HomePage(){
             <h1 className="text-white leading-none">
 
                 <span className="block font-light text-3xl md:text-5xl lg:text-7xl">
-                    Nature is
+                    Rooted in Nature.
                 </span>
 
                
 
                 <span className="block font-light text-3xl md:text-5xl lg:text-7xl">
-                    the New <span className="text-amber-300">Luxury</span>.
+                    Designed For <span className="text-amber-300">Life</span>.
                 </span>
 
             </h1>

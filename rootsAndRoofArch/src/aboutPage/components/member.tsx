@@ -9,7 +9,7 @@ export default function MemberComponent({name, position, imagePath}:props){
     return (
         <div 
             id="vision"
-            aria-label="Vission section for About page - Akiro Construction and Supply Cebu"
+            aria-label="Vission section for About page -  Roots and Roof Architecs"
             className="relative pt-10 gap-x-20 gap-y-10 flex flex-col lg:flex-row min-h-[60vh] h-auto w-screen bg-white justify-center items-center"
         >   
             {/* image */}

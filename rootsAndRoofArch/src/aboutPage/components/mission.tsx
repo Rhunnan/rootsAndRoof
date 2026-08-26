@@ -1,22 +1,3 @@
-// export default function MissionComponent(){
-//     return (
-//         <section 
-//             id="vision"
-//             aria-label="Vission section for About page - Akiro Construction and Supply Cebu"
-//             className="relative pt-30 flex flex-col min-h-screen h-auto w-screen bg-white justify-center items-center"
-//         >
-//             {/* <div className="absolute w-[20%] h-[4%] md:w-[20%] md:h-[7%]  bg-gray-300 top-20 left-0"></div> */}
-//             <h2 className="roots-text-color text-5xl md:text-8xl lg:text-8xl font-medium ">OUR MISSION</h2>
-//             <p className="p-20 text-3xl md:text-6xl ">To design sustainable, regenerative, and natureconnected spaces that support well-being and protect the
-//                 planet, and inspire a harmonious coexistence with
-//                 nature.
-//             </p>
-//             {/* <div className="absolute w-[20%] h-[4%] md:w-[20%] md:h-[7%] bg-gray-300 bottom-20 right-0"></div> */}
-
-//         </section>
-//     );
-// }
-
 export default function MissionComponent() {
   return (
     <section
@@ -63,10 +44,8 @@ export default function MissionComponent() {
                 font-light
               "
             >
-              Our mission is to design sustainable, regenerative,
-              and nature-connected spaces that enrich everyday life,
-              restore ecological balance, and foster a lasting harmony
-              between people and the environment.
+              Our mission is to create <strong>Regenerative Architecture and Biophilic Living Environments</strong> that connect people with nature while restoring the land.
+              We integrate <strong>Permaculture, Soil Ecology, Food systems, Water Systems, Landscape, and Architecture</strong> to create healthy, resilient places where people and nature can thrive together.
             </p>
 
             <p
@@ -78,11 +57,7 @@ export default function MissionComponent() {
                 max-w-3xl
               "
             >
-              Every project is guided by thoughtful planning,
-              environmental responsibility, and timeless design
-              principles. We believe architecture should not simply
-              occupy the land—it should nurture it, respond to it,
-              and become a living extension of nature itself.
+             We believe architecture should not simply occupy the land it should nurture it, regenerate it, and become part of a living ecosystem.
             </p>
 
           </div>
