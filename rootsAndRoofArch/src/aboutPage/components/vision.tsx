@@ -3,7 +3,7 @@ export default function VisionComponent() {
     <section
       id="vision"
       aria-label="Roots & Roof Vision"
-      className="w-full bg-[#F8F6F2] py-28 lg:py-36"
+      className="w-full py-28 lg:py-36"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
@@ -16,14 +16,19 @@ export default function VisionComponent() {
             <p
               className="
                 text-xl
-                md:text-2xl
                 leading-relaxed
                 text-[#4B4B4B]
                 font-light
               "
             >
-              We envision a future where <strong>regenerative architecture and biophilic living</strong> create a positive relationship between people and the land.
-              Through <strong>permaculture, soil ecology, food systems, water, and nature inspired design</strong>, we strive to create places that restore ecosystems, nourish communities, and strengthen the environment rather than simply reduce their impact.
+              The future of design is not about separating people from nature, it is about bringing life back into the places we call home.
+
+              At Roots & Roof Architects, we envision homes, farms, resorts, communities, and developments as living ecosystems, where architecture works with sunlight and wind, landscapes grow food, healthy soil supports biodiversity, and water is captured, cleaned, reused, and returned responsibly to nature.
+
+              A future where your home can nourish your family.
+              Where your landscape can heal the soil.
+              Where water becomes a resource, not a waste.
+              Where nature is not something outside your window, but part of everyday life.
             </p>
 
             <p
@@ -35,7 +40,8 @@ export default function VisionComponent() {
                 max-w-3xl
               "
             >
-              We believe the future of architecture is not about taking less from nature, it is about giving back more, creating resilient living environments where people, food, and nature can thrive together.
+              This is the future we want to design.
+              Not just buildings that last, but places that help life thrive.
             </p>
 
           </div>
@@ -60,8 +66,7 @@ export default function VisionComponent() {
                 leading-tight
               "
             >
-              Designing Today Without Borrowing From Tomorrow
-
+              From Building Spaces to Creating Living Systems.
             </h2>
 
             <div className="mt-8 ml-auto w-24 h-[2px] bg-[#D6D1C4]" />

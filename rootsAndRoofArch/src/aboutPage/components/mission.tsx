@@ -38,14 +38,12 @@ export default function MissionComponent() {
             <p
               className="
                 text-xl
-                md:text-2xl
                 leading-relaxed
                 text-[#4B4B4B]
                 font-light
               "
             >
-              Our mission is to create <strong>Regenerative Architecture and Biophilic Living Environments</strong> that connect people with nature while restoring the land.
-              We integrate <strong>Permaculture, Soil Ecology, Food systems, Water Systems, Landscape, and Architecture</strong> to create healthy, resilient places where people and nature can thrive together.
+              Our mission is to unite Permaculture, Biophilic Design, Soil Food Web Science, and Engineered Aquaponics with Architecture to create the ultimate living environment, healthy homes within regenerative ecosystems that restore the land, produce food, conserve water, nurture biodiversity, and improve human well-being.
             </p>
 
             <p
@@ -57,7 +55,7 @@ export default function MissionComponent() {
                 max-w-3xl
               "
             >
-             We believe architecture should not simply occupy the land it should nurture it, regenerate it, and become part of a living ecosystem.
+              We design places that sustain life, restore nature, and create a healthier legacy for generations to come.
             </p>
 
           </div>

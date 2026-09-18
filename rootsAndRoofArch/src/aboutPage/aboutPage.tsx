@@ -5,6 +5,7 @@ import VisionComponent from "./components/vision";
 import MissionComponent from "./components/mission";
 import InviteComponent from "../components/invite";
 import AnimationObserver from "../components/observerAnimation";
+import CertificationsComponent from "./components/certifications";
 import { Helmet } from "react-helmet-async";
 
 export default function AboutPage(){
@@ -95,9 +96,7 @@ export default function AboutPage(){
                     </h1>
 
                     <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-200">
-
-                        We believe the future of development is not simply about reducing harm, but restoring what has been damaged through regenerative architecture, biophilic living, permaculture, soil ecology, and food systems that help people and nature thrive together.
-
+                      Through our four design foundations: Permaculture, Biophilic Design, Soil Food Web Science, and Engineered Aquaponics, we are moving beyond conventional sustainability toward regenerative design places that actively give back.
                     </p>
 
                 </div>
@@ -111,6 +110,7 @@ export default function AboutPage(){
         <AnimationObserver>
           <VisionComponent/>
         </AnimationObserver>
+        <CertificationsComponent />
         {/* <TeamComponent/> */}
         <InviteComponent isProjectPage={false}/>
         <FooterComponent/>       
